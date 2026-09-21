@@ -57,70 +57,6 @@
         </div>
     </div>
     <main class="main" id="home" data-barba="container" data-barba-namespace="home">
-        <div class="mouse-pos-list-image no-select">
-            <div class="mouse-pos-list-image-bounce overlay">
-                <div class="float-image-wrap">
-                    <li class="mouse-pos-list-image-inner development interaction visible">
-                        <div class="overlay overlay-image lazy"
-                            style="background-color: #F1F1F1; background-position: center center; background-repeat: no-repeat; background-size: cover;"
-                            data-bg="images/projects/1.webp">
-                        </div>
-                    </li>
-                    <li class="mouse-pos-list-image-inner design development interaction visible">
-                        <div class="overlay overlay-image lazy"
-                            style="background-color: #E0D9D1; background-position: center center; background-repeat: no-repeat; background-size: cover;"
-                            data-bg="images/projects/2.webp">
-                        </div>
-                    </li>
-                    <li class="mouse-pos-list-image-inner design development interaction visible">
-                        <div class="overlay overlay-image lazy"
-                            style="background-color: #48494A; background-position: center center; background-repeat: no-repeat; background-size: cover;"
-                            data-bg="images/projects/3.webp">
-                        </div>
-                    </li>
-                    <li class="mouse-pos-list-image-inner design development interaction visible">
-                        <div class="overlay overlay-image lazy"
-                            style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;"
-                            data-bg="images/projects/4.webp">
-                        </div>
-                    </li>
-                    <li class="mouse-pos-list-image-inner design development interaction visible">
-                        <div class="overlay overlay-image lazy"
-                            style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;"
-                            data-bg="images/projects/5.webp">
-                        </div>
-                    </li>
-                    <li class="mouse-pos-list-image-inner development interaction visible">
-                        <div class="overlay overlay-image lazy"
-                            style="background-color: #F1F1F1; background-position: center center; background-repeat: no-repeat; background-size: cover;"
-                            data-bg="images/projects/6.webp">
-                        </div>
-                    </li>
-                    <li class="mouse-pos-list-image-inner design development interaction visible">
-                        <div class="overlay overlay-image lazy"
-                            style="background-color: #E0D9D1; background-position: center center; background-repeat: no-repeat; background-size: cover;"
-                            data-bg="images/projects/7.webp">
-                        </div>
-                    </li>
-                    <li class="mouse-pos-list-image-inner design development interaction visible">
-                        <div class="overlay overlay-image lazy"
-                            style="background-color: #48494A; background-position: center center; background-repeat: no-repeat; background-size: cover;"
-                            data-bg="images/projects/8.webp">
-                        </div>
-                    </li>
-                    <li class="mouse-pos-list-image-inner design development interaction visible">
-                        <div class="overlay overlay-image lazy"
-                            style="background-color: #101010; background-position: center center; background-repeat: no-repeat; background-size: cover;"
-                            data-bg="images/projects/9.webp">
-                        </div>
-                    </li>
-                </div>
-            </div>
-        </div>
-        <div class="mouse-pos-list-btn no-select"></div>
-        <div class="mouse-pos-list-span no-select">
-            <p>View</p>
-        </div>
         <div class="btn btn-hamburger">
             <div class="btn-click magnetic" data-strength="50" data-strength-text="25" style="border: 1px solid white;">
                 <div class="btn-fill"></div>
@@ -150,7 +86,7 @@
                             </a>
                         </li>
                         <li class="btn btn-link">
-                            <a href="https://github.com/dhindonk?tab=repositories" target="_blank"
+                            <a href="#work-section" data-scroll-to
                                 class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
                                     <span class="btn-text-inner">Work</span>
@@ -166,7 +102,7 @@
                             </a>
                         </li>
                         <li class="btn btn-link">
-                            <a href="mailto:muhammadarsal@gmail.com" class="btn-click magnetic" data-strength="24"
+                            <a href="#contact-section" data-scroll-to class="btn-click magnetic" data-strength="24"
                                 data-strength-text="12">
                                 <span class="btn-text">
                                     <span class="btn-text-inner">Contact</span>
@@ -224,7 +160,7 @@
                     <div class="nav-links-pill">
                         <ul class="links-wrap">
                             <li class="btn btn-link">
-                                <a href="https://github.com/dhindonk?tab=repositories" target="_blank"
+                                <a href="#work-section" data-scroll-to
                                     class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                     <span class="btn-text">
                                         <span class="btn-text-inner">Work</span>
@@ -239,7 +175,7 @@
                                 </a>
                             </li>
                             <li class="btn btn-link nav-cta">
-                                <a href="mailto:muhammadarsal@gmail.com" class="btn-click magnetic" data-strength="20"
+                                <a href="#contact-section" data-scroll-to class="btn-click magnetic" data-strength="20"
                                     data-strength-text="10">
                                     <span class="btn-text">
                                         <span class="btn-text-inner">Contact</span>
@@ -344,259 +280,34 @@
             </header>
             <section class="section home-intro" data-scroll-section>
                 <div class="container medium">
-                    <!-- Category Tag -->
-                    <div class="intro-category-tag">
-                        <span>01 / PHILOSOPHY & CRAFT</span>
-                    </div>
-
-                    <div class="row intro-grid">
-                        <!-- Left Column: Headline & Interactive String -->
-                        <div class="flex-col intro-main-col">
+                    <div class="row intro-top-row">
+                        <!-- Left Column: Headline -->
+                        <div class="flex-col intro-headline-col">
                             <h3 class="span-lines animate intro-headline">
-                                Architecting scalable web applications, robust backends, and clean APIs with engineering precision.
+                                Architecting <span class="intro-highlight">scalable web systems</span>, robust backends, and <span class="intro-highlight">clean APIs</span> with engineering precision.
                             </h3>
-
-                            <div class="intro-skills-inline">
-                                <span>Laravel & PHP</span>
-                                <span class="divider">/</span>
-                                <span>RESTful APIs & Supabase</span>
-                                <span class="divider">/</span>
-                                <span>Frontend Engineering</span>
-                            </div>
-
-                            <!-- Line -->
-                            <div id="boxLine">
-                                <div class="svg-container">
-                                    <svg xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M 60 100 Q 660 100 1260 100" />
-                                    </svg>
-                                </div>
-
-                                <div class="interaction-area"></div>
-                            </div>
                         </div>
 
                         <!-- Right Column: Pure Open Text & Magnetic Action Button -->
                         <div class="flex-col intro-sub-col">
                             <div class="intro-text-block">
                                 <div class="text-wrap fade-in animate">
-                                    <p>Based in Indonesia, crafting custom digital solutions. Focused on modular architecture, robust API design, and intuitive user experiences.</p>
-                                </div>
-                                <div class="intro-action-wrap">
-                                    <div class="btn btn-round" data-scroll data-scroll-speed="2">
-                                        <a href="/about.html" class="btn-click magnetic" data-strength="100" data-strength-text="50">
-                                            <div class="btn-fill"></div>
-                                            <span class="btn-text">
-                                                <span class="btn-text-inner">
-                                                    <!-- Arrow -->
-                                                    <svg id="arrow-ribbon" xmlns="http://www.w3.org/2000/svg" width="174.957"
-                                                        height="174.883" viewBox="0 0 174.957 174.883">
-                                                        <g id="Group_1586" data-name="Group 1586"
-                                                            transform="translate(-163.411 -2072.411)">
-                                                            <g data-name="Group 1341"
-                                                                transform="translate(242.139 2126.173) rotate(30)">
-                                                                <g id="Group_1366" data-name="Group 1366"
-                                                                    transform="translate(0 0)">
-                                                                    <path id="Path_657" data-name="Path 657"
-                                                                        d="M0,1.447C6.727,4.99,14.8,6.967,22.828,0"
-                                                                        transform="translate(44.602 26.799) rotate(105)"
-                                                                        fill="none" stroke="#fff" stroke-width="2"></path>
-                                                                    <path id="Path_658" data-name="Path 658"
-                                                                        d="M0,3.22C6.727-.323,14.8-2.3,22.828,4.667"
-                                                                        transform="translate(17.851 38.434) rotate(15)"
-                                                                        fill="none" stroke="#fff" stroke-width="2"></path>
-                                                                    <path id="Path_909" data-name="Path 909" d="M40.5,0,0,40.5"
-                                                                        transform="translate(49.608 10.483) rotate(105)"
-                                                                        fill="none" stroke="#fff" stroke-width="2"></path>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </svg>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <span class="cta-label">About Me</span>
+                                    <p>Bridging complex backend logic with smooth, high-performance user interfaces. Dedicated to clean architecture and reliable execution.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="section work-grid large-work-grid" data-scroll-section>
-                <div class="container">
-                    <div class="grid-sub-title">
-                        <div class="flex-col">
-                            <h5>Recent work</h5>
-                        </div>
-                    </div>
-                    <ul class="work-items mouse-pos-list-image-wrap">
-                        <li class="development interaction visible">
-                            <div class="stripe animate"></div>
-                            <a href="https://drive.google.com/drive/folders/19idveAv_yFQ5U2zwQNGZx9f9tjsV3_YX?usp=sharing"
-                                class="row">
-                                <div class="flex-col">
-                                    <h4><span>SASYS</span></h4>
-                                    <h5><span>Smart Alert System for Fire Detection</span></h5>
-                                    <span>A fire detection system combining ESP32-based IoT sensors with a Flutter
-                                        mobile
-                                        app. It detects smoke and fire, triggers alerts with sound alarms, and allows
-                                        civilians to submit photo evidence for validation by authorities.</span>
-                                </div>
-                                <div class="flex-col animate">
-                                    <p>Mobile & IoT</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="design development interaction visible">
-                            <div class="stripe animate"></div>
-                            <a href="https://github.com/dhindonk/iLab_laravel.git" class="row">
-                                <div class="flex-col">
-                                    <h4><span>iLab</span></h4>
-                                    <h5><span>Web & Mobile-Based Project Management System</span></h5>
-                                    <span>iLab is a project management platform with admin access via web and user
-                                        access
-                                        via Android. Verified users can create open-call projects, apply to available
-                                        jobs,
-                                        and manage submissions, while admins oversee data and reports.</span>
-                                </div>
-                                <div class="flex-col animate">
-                                    <p>Web & Mobile Development</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="design development interaction visible">
-                            <div class="stripe animate"></div>
-                            <a href="https://github.com/dhindonk/flutter_bazSmart.git" class="row">
-                                <div class="flex-col">
-                                    <h4><span>BazSmart</span></h4>
-                                    <h5><span>Smart Zakat Management App</span></h5>
-                                    <span>BazSmart is a mobile app that helps users calculate and pay zakat based on
-                                        their
-                                        income. It features an NLP-powered chatbot that assists in zakat management and
-                                        provides personalized payment reports.</span>
-                                </div>
-                                <div class="flex-col animate">
-                                    <p>Mobile Development</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="design development interaction visible">
-                            <div class="stripe animate"></div>
-                            <a href="https://sahabatsafety.co.id" class="row">
-                                <div class="flex-col">
-                                    <h4><span>Sahabat Safety</span></h4>
-                                    <h5><span></span></h5>
-                                    <span>Company profile website with articles, services and other interesting
-                                        features.</span>
-                                </div>
-                                <div class="flex-col animate">
-                                    <p>Web Development</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="design development interaction visible">
-                            <div class="stripe animate"></div>
-                            <a href="https://github.com/dhindonk/flutter-face-recognition" class="row">
-                                <div class="flex-col">
-                                    <h4><span>Attendify</span></h4>
-                                    <h5><span>Smart Attendance System</span></h5>
-                                    <span>Mobile and web app for face-based attendance with real-time GPS verification,
-                                        fake
-                                        GPS detection, and admin dashboard. Built with Flutter, Laravel, and
-                                        TensorFlow.</span>
-                                </div>
-                                <div class="flex-col animate">
-                                    <p>Mobile & Web Development</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="design development interaction visible">
-                            <div class="stripe animate"></div>
-                            <a href="https://github.com/dhindonk/flutter_photo_editing.git" class="row">
-                                <div class="flex-col">
-                                    <h4><span>ImageLab</span></h4>
-                                    <h5><span>Photo Editor with Digital Image Processing</span></h5>
-                                    <span>ImageLab is a mobile photo editor that implements core digital image
-                                        processing
-                                        concepts, including color modes, pixel & histogram operations, edge detection
-                                        filters (Roberts, Prewitt, Sobel, Canny), geometric transformations,
-                                        morphological
-                                        processes, and convolution-based enhancements.</span>
-                                </div>
-                                <div class="flex-col animate">
-                                    <p>Mobile Development</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="design development interaction visible">
-                            <div class="stripe animate"></div>
-                            <a href="https://github.com/dhindonk/ompel-monitoring" class="row">
-                                <div class="flex-col">
-                                    <h4><span>OmPel</span></h4>
-                                    <h5><span>Cleaning Service Monitoring System</span></h5>
-                                    <span>OmPel is a web and mobile system with three roles: admin, supervisor, and
-                                        cleaning
-                                        staff. Admins manage users, schedules, and reports; supervisors monitor job
-                                        progress; and staff check in via selfie, update daily tasks, and submit job
-                                        reports.
-                                        Tasks auto-update based on the current day.</span>
-                                </div>
-                                <div class="flex-col animate">
-                                    <p>Mobile & Web Development</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="design development interaction visible">
-                            <div class="stripe animate"></div>
-                            <a href="https://github.com/dhindonk/laravel-harvest-prediction.git" class="row">
-                                <div class="flex-col">
-                                    <h4><span>ALVERA</span></h4>
-                                    <h5><span>Aloe Vera Harvest Prediction</span></h5>
-                                    <span>Web-based system for predicting aloe vera yield using environmental data,
-                                        Excel
-                                        input templates, and Random Forest forecasting with suggestions for
-                                        improvement.</span>
-                                </div>
-                                <div class="flex-col animate">
-                                    <p>Web Development</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="design development interaction visible">
-                            <div class="stripe animate"></div>
-                            <a href="https://github.com/dhindonk/laravel_management_presentation_class.git" class="row">
-                                <div class="flex-col">
-                                    <h4><span>CLAPS</span></h4>
-                                    <h5><span>Class Presentation Scheduler Web App</span></h5>
-                                    <span>A web-based scheduling tool built with Laravel to manage and organize
-                                        classroom
-                                        presentation slots. It simplifies submissions and allows public access to
-                                        schedules
-                                        and updates, enhanced with interactive GSAP animations.</span>
-                                </div>
-                                <div class="flex-col animate">
-                                    <p>Web Development</p>
-                                </div>
-                            </a>
-                        </li>
-                        <div class="stripe last animate"></div>
-                    </ul>
-                </div>
-            </section>
 
-            <section class="section center-grid-btn center-grid-btn-home" data-scroll-section>
-                <div class="container">
-                    <div class="grid-after-btn">
-                        <div class="btn btn-normal">
-                            <a href="https://github.com/dhindonk?tab=repositories" class="btn-click magnetic"
-                                data-strength="25" data-strength-text="15">
-                                <div class="btn-fill"></div>
-                                <span class="btn-text">
-                                    <span class="btn-text-inner change">More work<div class="count-nr">n</div></span>
-                                </span>
-                            </a>
+                <!-- Full Width Interactive String Below Both Columns -->
+                <div class="row intro-string-row">
+                    <div id="boxLine">
+                        <div class="svg-container">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 60 100 Q 660 100 1260 100" />
+                            </svg>
                         </div>
+                        <div class="interaction-area"></div>
                     </div>
                 </div>
             </section>
@@ -605,65 +316,90 @@
                     <div class="row row-1" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
                         <div class="flex-col">
                             <div class="horizontal-single-item">
-                                <div class="overlay lazy"
-                                    style="background-position: center center; background-repeat: no-repeat; background-size: contain;"
-                                    data-bg="images/projects/11.webp"></div>
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: contain;" data-bg="images/projects/11.webp"></div>
+                                <div class="proj-info-overlay">
+                                    <span class="proj-tag">ML / Python</span>
+                                    <h4 class="proj-name">Prediksi Hasil Panen</h4>
+                                    <p class="proj-desc">Machine learning model untuk prediksi hasil panen dengan analisis data pertanian via CSV upload.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="flex-col">
                             <div class="horizontal-single-item">
-                                <div class="overlay lazy"
-                                    style="background-position: center center; background-repeat: no-repeat; background-size: contain;"
-                                    data-bg="images/projects/12.webp"></div>
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: contain;" data-bg="images/projects/12.webp"></div>
+                                <div class="proj-info-overlay">
+                                    <span class="proj-tag">Mobile / Flutter</span>
+                                    <h4 class="proj-name">Attendify</h4>
+                                    <p class="proj-desc">Aplikasi absensi berbasis face recognition & real-time location dengan anti-GPS spoofing.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="flex-col">
                             <div class="horizontal-single-item">
-                                <div class="overlay lazy"
-                                    style="background-position: center center; background-repeat: no-repeat; background-size: contain;"
-                                    data-bg="images/projects/13.webp"></div>
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: contain;" data-bg="images/projects/13.webp"></div>
+                                <div class="proj-info-overlay">
+                                    <span class="proj-tag">Full-Stack / Laravel</span>
+                                    <h4 class="proj-name">iLab Management</h4>
+                                    <p class="proj-desc">Sistem manajemen laboratorium enterprise dengan slicing UI, REST API, dan role-based security.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="flex-col">
                             <div class="horizontal-single-item">
-                                <div class="overlay lazy"
-                                    style="background-position: center center; background-repeat: no-repeat; background-size: contain;"
-                                    data-bg="images/projects/14.webp"></div>
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: contain;" data-bg="images/projects/14.webp"></div>
+                                <div class="proj-info-overlay">
+                                    <span class="proj-tag">Mobile / Flutter</span>
+                                    <h4 class="proj-name">Detail Tugas App</h4>
+                                    <p class="proj-desc">Aplikasi manajemen tugas tim dengan fitur assignment, progress tracking, dan notifikasi real-time.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row row-2" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
                         <div class="flex-col">
                             <div class="horizontal-single-item">
-                                <div class="overlay lazy"
-                                    style="background-position: center center; background-repeat: no-repeat; background-size: contain;"
-                                    data-bg="images/projects/15.webp"></div>
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: contain;" data-bg="images/projects/15.webp"></div>
+                                <div class="proj-info-overlay">
+                                    <span class="proj-tag">Full-Stack / Laravel</span>
+                                    <h4 class="proj-name">Ompel Dashboard</h4>
+                                    <p class="proj-desc">Dashboard web management proyek dengan tracking member, milestone, dan laporan progres tim.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="flex-col">
                             <div class="horizontal-single-item">
-                                <div class="overlay lazy"
-                                    style="background-position: center center; background-repeat: no-repeat; background-size: contain;"
-                                    data-bg="images/projects/16.webp"></div>
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: contain;" data-bg="images/projects/16.webp"></div>
+                                <div class="proj-info-overlay">
+                                    <span class="proj-tag">Web / Laravel</span>
+                                    <h4 class="proj-name">Sahabat Safety K3</h4>
+                                    <p class="proj-desc">Portal konsultasi dan pengurusan dokumen K3 untuk 45+ perusahaan dengan sistem online terintegrasi.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="flex-col">
                             <div class="horizontal-single-item">
-                                <div class="overlay lazy"
-                                    style="background-position: center center; background-repeat: no-repeat; background-size: contain;"
-                                    data-bg="images/projects/17.webp"></div>
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: contain;" data-bg="images/projects/17.webp"></div>
+                                <div class="proj-info-overlay">
+                                    <span class="proj-tag">Full-Stack / Laravel</span>
+                                    <h4 class="proj-name">Project Tracker</h4>
+                                    <p class="proj-desc">Sistem tracking web & mobile projects dengan detail progres, member assignment, dan deadline management.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="flex-col">
                             <div class="horizontal-single-item">
-                                <div class="overlay lazy"
-                                    style="background-position: center center; background-repeat: no-repeat; background-size: contain;"
-                                    data-bg="images/projects/18.webp"></div>
+                                <div class="overlay lazy" style="background-position: center center; background-repeat: no-repeat; background-size: contain;" data-bg="images/projects/18.webp"></div>
+                                <div class="proj-info-overlay">
+                                    <span class="proj-tag">Mobile / Flutter</span>
+                                    <h4 class="proj-name">Pengajuan Presma</h4>
+                                    <p class="proj-desc">Aplikasi mobile untuk pengajuan dan presentasi program Mobile Programming dengan alur digital.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
             <div class="footer-rounded-div" data-scroll-section>
                 <div class="rounded-div-wrap">
                     <div class="rounded-div"></div>
@@ -693,7 +429,7 @@
                                     </svg>
                                 </div>
                                 <h2><span>
-                                        <div class="profile-picture"></div> Let’s work
+                                        <div class="profile-picture"></div> LetΓÇÖs work
                                     </span><span>together</span></h2>
                             </div>
                         </div>
@@ -743,7 +479,7 @@
                             <div class="flex-col">
                                 <div class="credits">
                                     <h5>Version</h5>
-                                    <p>2026 © Muhammad Arsal</p>
+                                    <p>2026 ┬⌐ Muhammad Arsal</p>
                                 </div>
                                 <div class="time">
                                     <h5>Local time</h5>
@@ -2354,6 +2090,32 @@
             // Jalankan update dimensi awal
             updateSvgDimensions();
         }
+
+        
+        // Add minimalist fade in up
+        function initMinimalistAnimations() {
+            if (document.querySelector('.fade-in-up')) {
+                const elements = document.querySelectorAll('.fade-in-up');
+                elements.forEach((el) => {
+                    gsap.to(el, {
+                        scrollTrigger: {
+                            trigger: el,
+                            start: 'top 90%',
+                            toggleActions: 'play none none none'
+                        },
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: 'power3.out'
+                    });
+                });
+            }
+        }
+        
+        $(document).ready(function () {
+            initMinimalistAnimations();
+        });
+
 
     </script>
 </body>
