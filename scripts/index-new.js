@@ -9,7 +9,7 @@ const selectAll = (e) => document.querySelectorAll(e);
 
 initPageTransitions();
 
-// Animation - First Page Load (Modern Bento Capsule Loader)
+// Animation - First Page Load (Supersonic F-15 Fighter Jet Flyby)
 function initLoaderHome() { 
 
   var tl = gsap.timeline();
@@ -28,9 +28,10 @@ function initLoaderHome() {
     });
   }
 
-  tl.set(".loader-content-wrap", { 
+  tl.set(".loader-welcome-wrap", { 
 		opacity: 0,
-    y: 40
+    scale: 0.9,
+    y: 15
 	});
 
   if ($(window).width() > 540) { 
@@ -53,45 +54,39 @@ function initLoaderHome() {
     }
   });
 
-  // Entrance
-  tl.to(".loader-content-wrap", {
-		duration: 0.5,
+  // 1. TAHAP PERTAMA: MUNCUL UCAPAN "SELAMAT DATANG" BESAR DI TENGAH LAYAR
+  tl.to(".loader-welcome-wrap", {
+		duration: 0.8,
 		opacity: 1,
+    scale: 1,
     y: 0,
     ease: "power3.out",
-    delay: 0.1
+    delay: 0.15
 	});
 
-  // Counter update
-  var counterObj = { val: 0 };
-  var statusEl = document.querySelector(".loader-status");
-  var numEl = document.querySelector(".loader-number");
+  // Tahan sejenak agar user membaca ucapan "SELAMAT DATANG" (~0.75s) SEBELUM pesawat muncul
+  tl.to({}, { duration: 0.75 });
 
-  tl.to(counterObj, {
-    duration: 1.3,
-    val: 100,
-    ease: "power2.inOut",
-    onUpdate: function() {
-      var current = Math.floor(counterObj.val);
-      if (numEl) numEl.textContent = current;
-      if (statusEl) {
-        if (current > 75) {
-          statusEl.textContent = "System Ready";
-        } else if (current > 35) {
-          statusEl.textContent = "Loading Web Environment";
-        }
-      }
+  // 2. TAHAP KEDUA: BARU PESAWAT MUNCUL & MELUNCUR DARI PINGGIR LAYAR!
+  tl.call(function() {
+    if (typeof startLoaderJetFlyby === "function") {
+      startLoaderJetFlyby();
     }
-  }, "=-0.2");
-  
-  // Exit animation
-  tl.to(".loader-content-wrap", {
-    duration: 0.4,
-    opacity: 0,
-    y: -40,
-    ease: "power2.in",
-    delay: 0.1
   });
+
+  // Pesawat meluncur pelan melewati ucapan (1.15s)
+  tl.to({}, { duration: 1.15 });
+
+  // Begitu pesawat melesat kencang (Afterburner Mach 2.8), ucapan memudar tersapu dorongan jet
+  tl.to(".loader-welcome-wrap", {
+    duration: 0.45,
+    opacity: 0,
+    scale: 1.05,
+    ease: "power2.in"
+  });
+
+  // Sisa durasi penerbangan pesawat keluar layar (0.3s)
+  tl.to({}, { duration: 0.3 });
 
 	tl.to(".loading-screen", {
 		duration: 0.8,

@@ -39,18 +39,12 @@
             <div class="rounded-div-wrap top">
                 <div class="rounded-div"></div>
             </div>
-            <div class="loader-content-wrap">
-                <div class="loader-header-meta">
-                    <span class="loader-tag">Hai</span>
-                </div>
-                <div class="loader-giant-counter">
-                    <span class="loader-number">0</span><span class="loader-percent">%</span>
-                </div>
-                <div class="loader-footer-meta">
-                    <span class="loader-status">Initializing System</span>
-                    <span class="loader-stack">Mohon tunggu</span>
-                </div>
+            <!-- Huge Centered Welcome Message Before Jet Arrival -->
+            <div class="loader-welcome-wrap">
+                <h1 class="loader-welcome-title">SELAMAT DATANG</h1>
             </div>
+            <!-- Fullscreen Supersonic Canvas: Full 100vw x 100vh Edge-to-Edge -->
+            <canvas id="loader-jet-canvas"></canvas>
             <div class="rounded-div-wrap bottom">
                 <div class="rounded-div"></div>
             </div>
@@ -152,7 +146,7 @@
                         <div class="btn">
                             <a href="index.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                 <span class="btn-text">
-                                    <span style="font-size: 20px;">Arsal • Dev</span>
+                                    <span class="nav-brand-text">© Code by Arsal</span>
                                 </span>
                             </a>
                         </div>
@@ -163,14 +157,14 @@
                                 <a href="#work-section" data-scroll-to class="btn-click magnetic" data-strength="20"
                                     data-strength-text="10">
                                     <span class="btn-text">
-                                        <span class="btn-text-inner">Karya</span>
+                                        <span class="btn-text-inner">Work</span>
                                     </span>
                                 </a>
                             </li>
                             <li class="btn btn-link">
                                 <a href="/" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                     <span class="btn-text">
-                                        <span class="btn-text-inner">Tentang</span>
+                                        <span class="btn-text-inner">About</span>
                                     </span>
                                 </a>
                             </li>
@@ -178,7 +172,7 @@
                                 <a href="#contact-section" data-scroll-to class="btn-click magnetic" data-strength="20"
                                     data-strength-text="10">
                                     <span class="btn-text">
-                                        <span class="btn-text-inner">Kontak</span>
+                                        <span class="btn-text-inner">Contact</span>
                                     </span>
                                 </a>
                             </li>
@@ -194,263 +188,268 @@
                 </div>
 
                 <div class="container hero-container once-in once-in-secondary">
-                    <div class="hero-bento-grid">
+                    <div class="hero-bento-grid hero-dennis-grid">
                         <!-- Left Editorial Column -->
                         <div class="hero-main-card">
-                            <div class="hero-status-pill">
-                                <span class="status-dot"></span>
-                                <span class="status-text">Tersedia untuk proyek & posisi full-time</span>
-                            </div>
-
-                            <h1 class="hero-title">Muhammad Arsal</h1>
+                            <h1 class="hero-greeting">
+                                Hey <span class="greeting-badge">there!</span>
+                            </h1>
 
                             <p class="hero-role-lead">
-                                Pengembang Web berspesialisasi dalam ekosistem <strong class="text-highlight">Laravel</strong>, <strong
-                                    class="text-highlight">RESTful API</strong> yang rapi, <strong
-                                    class="text-highlight">Supabase</strong>, dan antarmuka JavaScript modern.
+                                Helping ideas grow with code. Based in Indonesia. I design and develop web applications and backend systems from scratch. Clean, fast, and user-focused.
                             </p>
 
-                            <!-- Core Stack (Pure Editorial Line) -->
-                            <p class="hero-tech-editorial"> 
-                                <span class="tech-name">Laravel</span>
-                                <span class="tech-sep">/</span>
-                                <span class="tech-name">REST API</span>
-                                <span class="tech-sep">/</span>
-                                <span class="tech-name">Supabase</span>
-                                <span class="tech-sep">/</span>
-                                <span class="tech-name">JavaScript & GSAP</span>
-                            </p>
+                            <h2 class="hero-role-sub">
+                                Full-Stack & Web Developer
+                            </h2>
 
-                            <div class="hero-actions">
-                                <div class="btn btn-normal hero-btn-primary">
-                                    <a href="https://github.com/arsalcode" target="_blank"
-                                        class="btn-click magnetic" data-strength="25" data-strength-text="15">
-                                        <div class="btn-fill"></div>
-                                        <span class="btn-text">
-                                            <span class="btn-text-inner change">Jelajahi Repositori</span>
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="btn btn-normal hero-btn-secondary">
-                                    <a href="mailto:arsalcode404@gmail.com" class="btn-click magnetic"
-                                        data-strength="25" data-strength-text="15">
-                                        <div class="btn-fill"></div>
-                                        <span class="btn-text">
-                                            <span class="btn-text-inner change">Hubungi Saya</span>
-                                        </span>
-                                    </a>
-                                </div>
+                            <div class="hero-arrow-wrap">
+                                <a href="#work-section" data-scroll-to class="hero-arrow-btn" aria-label="Lihat Karya">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
 
-                        <!-- Right Profile Bento Frame -->
-                        <div class="hero-profile-card">
-                            <div class="profile-image-frame">
-                                <img src="images/Person_2.webp" alt="Muhammad Arsal" class="profile-img" />
-                                <div class="profile-card-badge">
-                                    <span class="badge-tag">Indonesia</span>
-                                    <span class="badge-sub">Pengembang Full-Stack</span>
-                                </div>
-                            </div>
+                        <!-- Right Profile Cutout (No Box Frame) -->
+                        <div class="hero-person-wrap">
+                            <img src="images/Person_2.webp" alt="Muhammad Arsal" class="hero-person-cutout" />
                         </div>
                     </div>
                 </div>
 
-                <!-- Bottom Ticker Bar -->
+                <!-- Bottom Ticker Bar (Full-Width Green Banner) -->
                 <div class="hero-ticker-bar once-in">
                     <div class="ticker-track" data-scroll data-scroll-direction="horizontal" data-scroll-speed="3"
                         data-scroll-position="top">
                         <div class="ticker-content">
                             <span>Muhammad Arsal</span>
                             <span class="ticker-dot">•</span>
-                            <span>Pengembang Web</span>
-                            <span class="ticker-dot">•</span>
-                            <span>Ekosistem Laravel</span>
-                            <span class="ticker-dot">•</span>
-                            <span>Supabase & SQL</span>
-                            <span class="ticker-dot">•</span>
-                            <span>RESTful API</span>
-                            <span class="ticker-dot">•</span>
-                            <span>Pengalaman Web Modern</span>
+                            <span>Muhammad Arsal</span>
                             <span class="ticker-dot">•</span>
                             <span>Muhammad Arsal</span>
                             <span class="ticker-dot">•</span>
-                            <span>Pengembang Web</span>
+                            <span>Muhammad Arsal</span>
                             <span class="ticker-dot">•</span>
                         </div>
                     </div>
                 </div>
             </header>
-            <section class="section home-intro" data-scroll-section>
-                <div class="container medium">
-                    <!-- Eyebrow Index Pill -->
-                    <div class="intro-eyebrow-wrap fade-in animate">
-                        <div class="section-index-badge">
-                            <span class="index-num">01</span>
-                            <span class="index-sep">•</span>
-                            <span class="index-label">Filosofi & Keahlian</span>
-                        </div>
-                    </div>
-
-                    <div class="row intro-top-row">
-                        <!-- Left Column: Editorial Headline -->
-                        <div class="flex-col intro-headline-col">
-                            <h2 class="span-lines animate intro-headline">
-                                Membangun <span class="intro-highlight">sistem web berskala besar</span>, backend yang tangguh,
-                                dan <span class="intro-highlight">API yang rapi</span> dengan presisi rekayasa.
-                            </h2>
-                        </div>
-
-                        <!-- Right Column: Narrative Subtext -->
-                        <div class="flex-col intro-sub-col">
-                            <div class="intro-text-block">
-                                <div class="text-wrap fade-in animate">
-                                    <p>Menghubungkan arsitektur backend yang kompleks dengan antarmuka web yang
-                                        responsif dan berkinerja tinggi. Berkomitmen pada kode yang bersih, skalabilitas
-                                        database, dan eksekusi sistem yang andal.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Capability Pillars Cards -->
-                    <div class="intro-pillars-grid fade-in animate">
-                        <div class="pillar-card">
-                            <div class="pillar-num">01</div>
-                            <h4 class="pillar-title">Arsitektur Terstruktur</h4>
-                            <p class="pillar-desc">Pengembangan backend Laravel & REST API yang rapi, dirancang untuk kecepatan,
-                                keamanan, dan pemeliharaan jangka panjang.</p>
-                        </div>
-                        <div class="pillar-card">
-                            <div class="pillar-num">02</div>
-                            <h4 class="pillar-title">Antarmuka Web Modern</h4>
-                            <p class="pillar-desc">Pengalaman frontend interaktif dan responsif yang dibangun dengan animasi GSAP
-                                yang mulus serta JavaScript dinamis.</p>
-                        </div>
-                        <div class="pillar-card">
-                            <div class="pillar-num">03</div>
-                            <h4 class="pillar-title">Basis Data & Cloud</h4>
-                            <p class="pillar-desc">Perancangan skema Supabase & SQL, optimasi query, serta integrasi
-                                layanan pihak ketiga secara seamless.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Full Width Interactive String Below Columns -->
-                <div class="row intro-string-row">
-                    <div id="boxLine">
-                        <div class="svg-container">
-                            <svg xmlns="http://www.w3.org/2000/svg">
-                                <path d="M 60 100 Q 660 100 1260 100" />
-                            </svg>
-                        </div>
-                        <div class="interaction-area"></div>
-                    </div>
-                </div>
-            </section>
+           
             <section class="section works-bento-section" id="work-section" data-scroll-section>
                 <div class="container medium">
                     <div class="works-header-wrap fade-in animate">
-                        <div class="section-index-badge">
-                            <span class="index-num">02</span>
-                            <span class="index-sep">•</span>
-                            <span class="index-label">Karya Pilihan</span>
+                        <h2 class="works-section-title">Work</h2>
+                        <!-- Touch Throttle Controller (Maju / Mundur) - 1 Lingkaran Bundar Utuh -->
+                        <div class="arcade-touch-dpad magnetic" id="arcadeTouchDpad" data-strength="36" data-strength-text="18" aria-label="Kontrol Maju Mundur Lintasan">
+                            <button type="button" class="dpad-btn dpad-up" id="dpadUp" aria-label="Maju">
+                                <svg class="dpad-arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                                <span class="dpad-text">run</span>
+                            </button>
+                            <div class="dpad-circle-divider" aria-hidden="true"></div>
+                            <button type="button" class="dpad-btn dpad-down" id="dpadDown" aria-label="Mundur">
+                                <span class="dpad-text">back</span>
+                                <svg class="dpad-arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
                         </div>
-                        <h2 class="works-section-title">Solusi Rekayasa & Aplikasi Interaktif</h2>
+                    </div>
+                </div>
+
+                <!-- Project Drive Arena (Interactive Airplane Journey - Full Screen Width) -->
+                <div class="project-drive-container fade-in animate">
+                    <!-- Arena Canvas Frame -->
+                    <div class="project-drive-arena" id="projectDriveArena">
+                        <!-- Canvas -->
+                        <canvas id="projectDriveCanvas"></canvas>
+
+                        <!-- Floating HUD Card (Muncul saat pesawat singgah di stasiun) -->
+                        <div class="station-hud-card" id="stationHudCard">
+                            <h3 class="hud-station-title" id="hudStationTitle">Payme: E-Wallet Proof of Concept (PoC)</h3>
+                            <p class="hud-station-desc" id="hudStationDesc">Prototype ekosistem dompet digital end-to-end dengan simulasi transaksi peer-to-peer dan dashboard admin KYC.</p>
+                            <div class="hud-station-tags" id="hudStationTags">
+                                <!-- Dynamic tech pills -->
+                            </div>
+                            <button type="button" class="hud-detail-btn" id="hudDetailBtn">
+                                <span>Buka Detail Project</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="works-carousel-wrapper fade-in animate">
+                    <!-- Carousel Top Header Controls -->
+                    <div class="works-carousel-controls">
+                        <div class="carousel-counter-badge">
+                            <span class="carousel-current" id="carouselCurrentNum">01</span>
+                            <span class="carousel-divider">/</span>
+                            <span class="carousel-total">04</span>
+                        </div>
+                        <div class="carousel-drag-tip">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16"/><path d="M6 8L2 12L6 16"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                            <span>Geser / Drag untuk navigasi 3D karya</span>
+                        </div>
+                        <div class="carousel-nav-arrows">
+                            <button type="button" class="carousel-arrow-btn prev" id="carouselPrevBtn" aria-label="Previous project">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            </button>
+                            <button type="button" class="carousel-arrow-btn next" id="carouselNextBtn" aria-label="Next project">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="works-bento-grid fade-in animate">
-                        <!-- Card 1: Featured Large -->
-                        <div class="work-card card-featured">
-                            <div class="work-gallery">
-                                <div class="work-img-frame">
-                                    <img class="work-main-image" src="images/project/project1/1.webp" alt="Payme e-wallet interface" loading="lazy">
+                    <!-- 3D Cylindrical Viewport Stage -->
+                    <div class="works-3d-stage" id="works3DStage">
+                        <div class="works-3d-track" id="works3DTrack">
+                            <!-- Card 1: Payme E-Wallet -->
+                            <div class="work-card card-3d" data-index="0">
+                                <div class="work-gallery">
+                                    <div class="work-img-frame">
+                                        <img class="work-main-image" src="images/project/project1/1.webp" alt="Payme e-wallet interface" loading="lazy">
+                                        <div class="work-card-glass-badge">
+                                            <span class="badge-dot"></span>
+                                            <span>Fintech PoC</span>
+                                        </div>
+                                    </div>
+                                    <div class="work-gallery-thumbs" aria-label="Payme project screenshots">
+                                        <img class="thumb-item active" src="images/project/project1/1.webp" alt="Payme screenshot 1" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project1/2.webp" alt="Payme screenshot 2" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project1/3.webp" alt="Payme screenshot 3" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project1/4.webp" alt="Payme screenshot 4" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project1/5.webp" alt="Payme screenshot 5" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project1/6.webp" alt="Payme screenshot 6" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project1/7.webp" alt="Payme screenshot 7" loading="lazy">
+                                    </div>
                                 </div>
-                                <div class="work-gallery-thumbs" aria-label="Payme project screenshots">
-                                    <img src="images/project/project1/1.webp" alt="Payme screenshot 1" loading="lazy">
-                                    <img src="images/project/project1/2.webp" alt="Payme screenshot 2" loading="lazy">
-                                    <img src="images/project/project1/3.webp" alt="Payme screenshot 3" loading="lazy">
-                                    <img src="images/project/project1/4.webp" alt="Payme screenshot 4" loading="lazy">
-                                    <img src="images/project/project1/5.webp" alt="Payme screenshot 5" loading="lazy">
-                                    <img src="images/project/project1/6.webp" alt="Payme screenshot 6" loading="lazy">
-                                    <img src="images/project/project1/7.webp" alt="Payme screenshot 7" loading="lazy">
+                                <div class="work-card-content">
+                                    <div class="work-meta">
+                                        <span class="proj-tag tag-laravel">Fintech / Full-Stack</span>
+                                        <span class="work-year">2026</span>
+                                    </div>
+                                    <h3 class="work-title">Payme: E-Wallet Proof of Concept (PoC) &amp; Central Back-Office</h3>
+                                    <p class="work-desc">Prototype ekosistem dompet digital end-to-end dengan simulasi transaksi peer-to-peer, pembelian paket data, riwayat mutasi saldo, serta dashboard admin KYC.</p>
+                                    <div class="work-card-actions">
+                                        <button type="button" class="work-detail-btn" data-project-id="1">
+                                            <span>Buka Detail Proyek</span>
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="work-card-content">
-                                <div class="work-meta">
-                                    <span class="proj-tag tag-laravel">Fintech / Full-Stack</span>
-                                    <span class="work-year">2026</span>
-                                </div>
-                                <h3 class="work-title">Payme: E-Wallet Proof of Concept (PoC) &amp; Central Back-Office</h3>
-                                <p class="work-desc">Prototype ekosistem dompet digital end-to-end dengan simulasi transaksi peer-to-peer, pembelian paket data, riwayat transaksi, reward berbasis poin, serta dashboard admin untuk manajemen pengguna, verifikasi KYC, dan audit mutasi saldo.</p>
-                            </div>
-                        </div>
 
-                        <!-- Card 2: Featured Large -->
-                        <div class="work-card card-featured">
-                            <div class="work-gallery">
-                                <div class="work-img-frame">
-                                    <img class="work-main-image" src="images/project/project2/1.webp" alt="Floral e-commerce catalog" loading="lazy">
+                            <!-- Card 2: Floral E-Commerce -->
+                            <div class="work-card card-3d" data-index="1">
+                                <div class="work-gallery">
+                                    <div class="work-img-frame">
+                                        <img class="work-main-image" src="images/project/project2/1.webp" alt="Floral e-commerce catalog" loading="lazy">
+                                        <div class="work-card-glass-badge">
+                                            <span class="badge-dot"></span>
+                                            <span>E-Commerce</span>
+                                        </div>
+                                    </div>
+                                    <div class="work-gallery-thumbs" aria-label="Floral project screenshots">
+                                        <img class="thumb-item active" src="images/project/project2/1.webp" alt="Floral screenshot 1" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project2/2.webp" alt="Floral screenshot 2" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project2/3.webp" alt="Floral screenshot 3" loading="lazy">
+                                    </div>
                                 </div>
-                                <div class="work-gallery-thumbs" aria-label="Floral project screenshots">
-                                    <img src="images/project/project2/1.webp" alt="Floral screenshot 1" loading="lazy">
-                                    <img src="images/project/project2/2.webp" alt="Floral screenshot 2" loading="lazy">
-                                    <img src="images/project/project2/3.webp" alt="Floral screenshot 3" loading="lazy">
+                                <div class="work-card-content">
+                                    <div class="work-meta">
+                                        <span class="proj-tag tag-flutter">E-Commerce / WhatsApp</span>
+                                        <span class="work-year">2026</span>
+                                    </div>
+                                    <h3 class="work-title">Floral E-Commerce &amp; WhatsApp Integration Platform</h3>
+                                    <p class="work-desc">Katalog interaktif bunga papan, standing flower, table flower, dan hand bouquet dengan product image zoom serta integrasi click-to-chat WhatsApp instan.</p>
+                                    <div class="work-card-actions">
+                                        <button type="button" class="work-detail-btn" data-project-id="2">
+                                            <span>Buka Detail Proyek</span>
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="work-card-content">
-                                <div class="work-meta">
-                                    <span class="proj-tag tag-flutter">E-Commerce / WhatsApp</span>
-                                    <span class="work-year">2026</span>
-                                </div>
-                                <h3 class="work-title">Floral E-Commerce &amp; WhatsApp Integration Platform</h3>
-                                <p class="work-desc">Katalog interaktif bunga papan, standing flower, table flower, dan hand bouquet untuk pasar B2B dan B2C, dengan product image zoom serta integrasi click-to-chat WhatsApp dari eksplorasi produk hingga pemesanan.</p>
-                            </div>
-                        </div>
 
-                        <!-- Card 3: Standard Bento -->
-                        <div class="work-card">
-                            <div class="work-gallery">
-                                <div class="work-img-frame">
-                                    <img class="work-main-image" src="images/project/project3/1.webp" alt="Herbal AI application" loading="lazy">
+                            <!-- Card 3: Herbal AI -->
+                            <div class="work-card card-3d" data-index="2">
+                                <div class="work-gallery">
+                                    <div class="work-img-frame">
+                                        <img class="work-main-image" src="images/project/project3/1.webp" alt="Herbal AI application" loading="lazy">
+                                        <div class="work-card-glass-badge">
+                                            <span class="badge-dot"></span>
+                                            <span>AI Vision &amp; NLP</span>
+                                        </div>
+                                    </div>
+                                    <div class="work-gallery-thumbs" aria-label="Herbal AI project screenshots">
+                                        <img class="thumb-item active" src="images/project/project3/1.webp" alt="Herbal AI screenshot 1" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project3/2.webp" alt="Herbal AI screenshot 2" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project3/3.webp" alt="Herbal AI screenshot 3" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project3/4.webp" alt="Herbal AI screenshot 4" loading="lazy">
+                                    </div>
                                 </div>
-                                <div class="work-gallery-thumbs" aria-label="Herbal AI project screenshots">
-                                    <img src="images/project/project3/1.webp" alt="Herbal AI screenshot 1" loading="lazy">
-                                    <img src="images/project/project3/2.webp" alt="Herbal AI screenshot 2" loading="lazy">
-                                    <img src="images/project/project3/3.webp" alt="Herbal AI screenshot 3" loading="lazy">
-                                    <img src="images/project/project3/4.webp" alt="Herbal AI screenshot 4" loading="lazy">
+                                <div class="work-card-content">
+                                    <div class="work-meta">
+                                        <span class="proj-tag tag-ml">AI / NLP / Computer Vision</span>
+                                        <span class="work-year">2026</span>
+                                    </div>
+                                    <h3 class="work-title">Sistem Konsultasi Herbal Tradisional berbasis AI</h3>
+                                    <p class="work-desc">Aplikasi cerdas IndoBERT Voice Chat dan Computer Vision YOLO untuk identifikasi tanaman herbal real-time dengan basis pengetahuan BALITTRO.</p>
+                                    <div class="work-card-actions">
+                                        <button type="button" class="work-detail-btn" data-project-id="3">
+                                            <span>Buka Detail Proyek</span>
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="work-card-content">
-                                <div class="work-meta">
-                                    <span class="proj-tag tag-ml">AI / NLP / Computer Vision</span>
-                                </div>
-                                <h3 class="work-title">Sistem Konsultasi Herbal Tradisional berbasis AI</h3>
-                                <p class="work-desc">Aplikasi mobile yang menggabungkan NLP IndoBERT dan Speech-to-Text untuk konsultasi voice chat, serta Computer Vision YOLO26 untuk identifikasi tanaman herbal secara real-time dengan basis pengetahuan BALITTRO dan validasi praktisi medis.</p>
-                            </div>
-                        </div>
 
-                        <!-- Card 4: Standard Bento -->
-                        <div class="work-card">
-                            <div class="work-gallery">
-                                <div class="work-img-frame">
-                                    <img class="work-main-image" src="images/project/project4/1.webp" alt="ZISmart mobile application" loading="lazy">
+                            <!-- Card 4: ZISmart Mobile -->
+                            <div class="work-card card-3d" data-index="3">
+                                <div class="work-gallery">
+                                    <div class="work-img-frame">
+                                        <img class="work-main-image" src="images/project/project4/1.webp" alt="ZISmart mobile application" loading="lazy">
+                                        <div class="work-card-glass-badge">
+                                            <span class="badge-dot"></span>
+                                            <span>Mobile &amp; Chatbot</span>
+                                        </div>
+                                    </div>
+                                    <div class="work-gallery-thumbs" aria-label="ZISmart project screenshots">
+                                        <img class="thumb-item active" src="images/project/project4/1.webp" alt="ZISmart screenshot 1" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project4/2.webp" alt="ZISmart screenshot 2" loading="lazy">
+                                        <img class="thumb-item" src="images/project/project4/3.webp" alt="ZISmart screenshot 3" loading="lazy">
+                                    </div>
                                 </div>
-                                <div class="work-gallery-thumbs" aria-label="ZISmart project screenshots">
-                                    <img src="images/project/project4/1.webp" alt="ZISmart screenshot 1" loading="lazy">
-                                    <img src="images/project/project4/2.webp" alt="ZISmart screenshot 2" loading="lazy">
-                                    <img src="images/project/project4/3.webp" alt="ZISmart screenshot 3" loading="lazy">
+                                <div class="work-card-content">
+                                    <div class="work-meta">
+                                        <span class="proj-tag tag-laravel">Mobile / Chatbot</span>
+                                        <span class="work-year">2026</span>
+                                    </div>
+                                    <h3 class="work-title">ZISmart: Zakat Management Mobile App &amp; Chatbot Integration</h3>
+                                    <p class="work-desc">Aplikasi mobile kalkulator zakat otomatis dengan chatbot interaktif, performa optimal pada Android 12–14, terpublikasi dalam jurnal ilmiah.</p>
+                                    <div class="work-card-actions">
+                                        <button type="button" class="work-detail-btn" data-project-id="4">
+                                            <span>Buka Detail Proyek</span>
+                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="work-card-content">
-                                <div class="work-meta">
-                                    <span class="proj-tag tag-laravel">Mobile / Chatbot</span>
-                                </div>
-                                <h3 class="work-title">ZISmart: Zakat Management Mobile App &amp; Chatbot Integration</h3>
-                                <p class="work-desc">Aplikasi mobile untuk edukasi, kalkulasi, dan transaksi Zakat, Infaq, dan Sadaqah dengan chatbot interaktif, pengujian QA lintas SDK, serta performa optimal pada Android 12 hingga 14. Hasil penelitian telah dipublikasikan dalam jurnal ilmiah.</p>
-                            </div>
-                        </div>
 
+                        </div>
+                    </div>
+
+                    <!-- Interactive Indicator Dots -->
+                    <div class="carousel-indicators" id="carouselIndicators">
+                        <button type="button" class="indicator-dot active" data-index="0" aria-label="Project 1: Payme"></button>
+                        <button type="button" class="indicator-dot" data-index="1" aria-label="Project 2: Floral E-Commerce"></button>
+                        <button type="button" class="indicator-dot" data-index="2" aria-label="Project 3: Herbal AI"></button>
+                        <button type="button" class="indicator-dot" data-index="3" aria-label="Project 4: ZISmart"></button>
                     </div>
                 </div>
             </section>
@@ -526,10 +525,586 @@
 
         initPageTransitions();
 
-        // Animation - First Page Load
-        // Animation - First Page Load (Modern Bento Capsule Loader)
-        function initLoaderHome() {
+        // ==========================================
+        // SUPERSONIC F-15 JET FLYBY LOADER ENGINE
+        // (Pesawat F-15 Merah Putih Ukuran Besar Lewat Kenceng Kecepatan Penuh)
+        // ==========================================
+        function startLoaderJetFlyby() {
+            var canvas = document.getElementById("loader-jet-canvas");
+            if (!canvas) return;
+            var ctx = canvas.getContext("2d");
+            if (!ctx) return;
 
+            var dpr = Math.min(window.devicePixelRatio || 1, 2);
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            canvas.width = w * dpr;
+            canvas.height = h * dpr;
+            ctx.scale(dpr, dpr);
+
+            // Ukuran Pesawat di Loader: JAUH Lebih Besar & Mengesankan (3.4x Desktop, 2.3x Mobile)
+            var jetScale = w > 600 ? 3.4 : 2.3;
+
+            // Memulai persis DILUAR PINGGIR LAYAR KIRI (Full Dari Pinggir)
+            var jet = {
+                x: -650,
+                y: h * 0.5,
+                angle: -0.006,
+                bankAngle: 0.12,
+                afterburner: 0.35
+            };
+
+            var particles = [];
+            var sonicRings = [];
+            var isRunning = true;
+
+            var jetTl = gsap.timeline({
+                onComplete: function () {
+                    isRunning = false;
+                }
+            });
+
+            // TAHAP 1: AWALNYA PESAWAT PELAN (Masuk full dari pinggir layar kiri)
+            jetTl.to(jet, {
+                duration: 1.15,
+                x: w * 0.32,
+                y: h * 0.5,
+                angle: -0.003,
+                bankAngle: 0.04,
+                afterburner: 0.42,
+                ease: "power1.out"
+            });
+
+            // TAHAP 2: TIBA-TIBA MELUNCUR KENCANG KELUAR MENEMBUS PINGGIR KANAN!
+            // (Sudden Explosive Afterburner Blast-Off through full right edge)
+            jetTl.to(jet, {
+                duration: 0.72,
+                x: w + 850,
+                y: h * 0.46,
+                angle: 0.034,
+                bankAngle: -0.15,
+                afterburner: 1.8,
+                ease: "power3.in",
+                onStart: function () {
+                    // Semburan 4 gelombang kejut sonik bertubi-tubi
+                    for (var b = 0; b < 4; b++) {
+                        (function (idx) {
+                            setTimeout(function () {
+                                sonicRings.push({
+                                    x: jet.x - 22 * jetScale,
+                                    y: jet.y,
+                                    radius: 18 * jetScale,
+                                    maxRadius: 130 * jetScale,
+                                    alpha: 0.95
+                                });
+                            }, idx * 65);
+                        })(b);
+                    }
+                },
+                onUpdate: function () {
+                    var blastProgress = (jet.x - w * 0.32) / (w * 0.68 + 850);
+                    if (blastProgress > 0.3 && Math.random() > 0.3) {
+                        sonicRings.push({
+                            x: jet.x - 25 * jetScale,
+                            y: jet.y,
+                            radius: 20 * jetScale,
+                            maxRadius: 100 * jetScale,
+                            alpha: 0.85
+                        });
+                    }
+                }
+            });
+
+            function renderLoop() {
+                if (!isRunning && particles.length === 0 && sonicRings.length === 0) return;
+
+                ctx.clearRect(0, 0, w, h);
+
+                // 1. Spawning Red & White Smoke Contrails (Asap Buntot Merah & Putih)
+                if (jet.x > -350 && jet.x < w + 550) {
+                    var isBlast = jet.afterburner > 0.8;
+                    var puffCount = isBlast ? 4 : 1;
+                    var pSpeed = isBlast ? (7 + Math.random() * 6) : (2 + Math.random() * 2);
+
+                    [-6.5, 6.5].forEach(function (offsetY) {
+                        var engX = jet.x + Math.cos(jet.angle) * (-34 * jetScale) - Math.sin(jet.angle) * (offsetY * jetScale);
+                        var engY = jet.y + Math.sin(jet.angle) * (-34 * jetScale) + Math.cos(jet.angle) * (offsetY * jetScale);
+                        var smokeColor = offsetY < 0 ? 'rgba(239, 68, 68, ' : 'rgba(255, 255, 255, ';
+
+                        for (var k = 0; k < puffCount; k++) {
+                            particles.push({
+                                x: engX + (Math.random() - 0.5) * 6,
+                                y: engY + (Math.random() - 0.5) * 6,
+                                vx: -Math.cos(jet.angle) * pSpeed + (Math.random() - 0.5) * 2,
+                                vy: -Math.sin(jet.angle) * 3 + (Math.random() - 0.5) * 2,
+                                size: (Math.random() * 3.5 + 3.2) * jetScale,
+                                color: smokeColor,
+                                alpha: isBlast ? 0.9 : 0.6,
+                                life: isBlast ? 42 : 28
+                            });
+                        }
+                    });
+                }
+
+                // 2. Render & update sonic shockwave rings
+                for (var s = sonicRings.length - 1; s >= 0; s--) {
+                    var ring = sonicRings[s];
+                    ring.radius += 4.5;
+                    ring.alpha *= 0.88;
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.ellipse(ring.x, ring.y, ring.radius * 0.42, ring.radius, Math.PI / 2, 0, Math.PI * 2);
+                    ctx.strokeStyle = 'rgba(255, 255, 255, ' + ring.alpha + ')';
+                    ctx.lineWidth = 2.4;
+                    ctx.stroke();
+                    ctx.restore();
+                    if (ring.alpha < 0.03 || ring.radius > ring.maxRadius) {
+                        sonicRings.splice(s, 1);
+                    }
+                }
+
+                // 3. Render & update contrail smoke particles
+                for (var i = particles.length - 1; i >= 0; i--) {
+                    var p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.life--;
+                    p.alpha *= 0.94;
+                    p.size += 0.35 * jetScale;
+
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color + Math.max(0, p.alpha) + ')';
+                    ctx.shadowColor = p.color + '0.45)';
+                    ctx.shadowBlur = 8;
+                    ctx.fill();
+                    ctx.restore();
+
+                    if (p.life <= 0 || p.alpha < 0.02) {
+                        particles.splice(i, 1);
+                    }
+                }
+
+                // 4. Draw Full-Throttle F-15 Strike Eagle Jet (Ukuran JAUH Lebih Besar, Setengah Merah Setengah Putih)
+                drawLoaderF15(ctx, jet.x, jet.y, jet.angle, jetScale, jet.bankAngle, jet.afterburner);
+
+                requestAnimationFrame(renderLoop);
+            }
+
+            requestAnimationFrame(renderLoop);
+        }
+
+        // Draw F-15 Strike Eagle for Loader Screen
+        function drawLoaderF15(ctx, x, y, angle, scale, bankAngle, afterburner) {
+            ctx.save();
+
+            // Camera rumble during explosive sudden launch
+            var abLevel = (afterburner !== undefined) ? afterburner : 1.0;
+            if (abLevel > 0.9) {
+                var shakeX = (Math.random() - 0.5) * 3;
+                var shakeY = (Math.random() - 0.5) * 2.5;
+                ctx.translate(shakeX, shakeY);
+            }
+
+            ctx.translate(x, y);
+            ctx.rotate(angle);
+            ctx.scale(scale, scale);
+
+            var bankScale = 1 - Math.abs(bankAngle) * 0.25;
+
+            // 1. Drop Shadow
+            ctx.save();
+            ctx.translate(-7, 24);
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.38)';
+            ctx.beginPath();
+            ctx.moveTo(42, 0);
+            ctx.bezierCurveTo(41.5, -2, 38, -3.2, 33, -3.8);
+            ctx.lineTo(24, -4.5);
+            ctx.lineTo(16, -9.5);
+            ctx.lineTo(12, -9.5);
+            ctx.lineTo(-14, -30 * bankScale);
+            ctx.lineTo(-23, -30 * bankScale);
+            ctx.lineTo(-20, -10);
+            ctx.lineTo(-22, -7);
+            ctx.lineTo(-39, -19 * bankScale);
+            ctx.lineTo(-43, -14 * bankScale);
+            ctx.lineTo(-34, -4);
+            ctx.lineTo(-34, 4);
+            ctx.lineTo(-43, 14 * bankScale);
+            ctx.lineTo(-39, 19 * bankScale);
+            ctx.lineTo(-22, 7);
+            ctx.lineTo(-20, 10);
+            ctx.lineTo(-23, 30 * bankScale);
+            ctx.lineTo(-14, 30 * bankScale);
+            ctx.lineTo(12, 9.5);
+            ctx.lineTo(16, 9.5);
+            ctx.lineTo(24, 4.5);
+            ctx.bezierCurveTo(38, 3.2, 41.5, 2, 42, 0);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+
+            // 2. Forward Radar & Supersonic Beam
+            var beamGrad = ctx.createRadialGradient(40, 0, 2, 190, 0, 130);
+            beamGrad.addColorStop(0, 'rgba(255, 255, 255, 0.85)');
+            beamGrad.addColorStop(0.25, 'rgba(239, 68, 68, 0.22)');
+            beamGrad.addColorStop(0.55, 'rgba(255, 255, 255, 0.1)');
+            beamGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            ctx.beginPath();
+            ctx.moveTo(40, -4);
+            ctx.lineTo(190, -50);
+            ctx.lineTo(190, 50);
+            ctx.lineTo(40, 4);
+            ctx.closePath();
+            ctx.fillStyle = beamGrad;
+            ctx.fill();
+
+            // 3. Underwing Fuel Drop Tanks
+            ctx.fillStyle = '#991b1b';
+            ctx.beginPath();
+            loaderRoundRectPath(ctx, -14, -18 * bankScale - 2, 18, 4, 2);
+            ctx.fill();
+            ctx.strokeStyle = '#ef4444';
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+
+            ctx.fillStyle = '#cbd5e1';
+            ctx.beginPath();
+            loaderRoundRectPath(ctx, -14, 18 * bankScale - 2, 18, 4, 2);
+            ctx.fill();
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+
+            // 4. Twin Turbofan Exhaust Nozzles & Dynamic Afterburner Flames
+            [-6.5, 6.5].forEach(function (yPos) {
+                ctx.fillStyle = '#1e293b';
+                ctx.beginPath();
+                ctx.rect(-34, yPos - 3.8, 6, 7.6);
+                ctx.fill();
+                ctx.strokeStyle = '#64748b';
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+
+                ctx.fillStyle = '#0f172a';
+                ctx.beginPath();
+                ctx.arc(-34, yPos, 2.8, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Dynamic Afterburner Flames: pendek saat pelan, raksasa saat melesat!
+                var flameLength = (16 + Math.random() * 8) * abLevel;
+                if (flameLength > 3) {
+                    var abGrad = ctx.createLinearGradient(-34, 0, -34 - flameLength, 0);
+                    if (yPos < 0) {
+                        abGrad.addColorStop(0, '#ffffff');
+                        abGrad.addColorStop(0.2, '#fbbf24');
+                        abGrad.addColorStop(0.55, '#ef4444');
+                        abGrad.addColorStop(1, 'rgba(220, 38, 38, 0)');
+                    } else {
+                        abGrad.addColorStop(0, '#ffffff');
+                        abGrad.addColorStop(0.25, '#67e8f9');
+                        abGrad.addColorStop(0.65, '#0284c7');
+                        abGrad.addColorStop(1, 'rgba(2, 132, 199, 0)');
+                    }
+                    ctx.fillStyle = abGrad;
+                    ctx.beginPath();
+                    ctx.moveTo(-34, yPos - 3.6);
+                    ctx.lineTo(-34 - flameLength, yPos);
+                    ctx.lineTo(-34, yPos + 3.6);
+                    ctx.closePath();
+                    ctx.fill();
+
+                    // Shock diamond cores
+                    if (abLevel > 0.7) {
+                        ctx.fillStyle = '#ffffff';
+                        ctx.beginPath();
+                        ctx.ellipse(-34 - flameLength * 0.35, yPos, flameLength * 0.22, 1.6, 0, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+            });
+
+            // 5. Clipped Delta Wings (Setengah Merah Setengah Putih)
+            // Sisi Kiri (Merah)
+            var leftWingGrad = ctx.createLinearGradient(0, 0, 0, -30 * bankScale);
+            leftWingGrad.addColorStop(0, '#dc2626');
+            leftWingGrad.addColorStop(0.5, '#ef4444');
+            leftWingGrad.addColorStop(1, '#b91c1c');
+            ctx.fillStyle = leftWingGrad;
+            ctx.beginPath();
+            ctx.moveTo(12, -9.5);
+            ctx.lineTo(-14, -30 * bankScale);
+            ctx.lineTo(-23, -30 * bankScale);
+            ctx.lineTo(-20, -10);
+            ctx.lineTo(-10, -9.5);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = '#991b1b';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Wing panel lines & missile rail kiri
+            ctx.fillStyle = '#7f1d1d';
+            ctx.fillRect(-24, -31 * bankScale, 12, 1.8);
+
+            // Sisi Kanan (Putih)
+            var rightWingGrad = ctx.createLinearGradient(0, 0, 0, 30 * bankScale);
+            rightWingGrad.addColorStop(0, '#ffffff');
+            rightWingGrad.addColorStop(0.5, '#f8fafc');
+            rightWingGrad.addColorStop(1, '#cbd5e1');
+            ctx.fillStyle = rightWingGrad;
+            ctx.beginPath();
+            ctx.moveTo(12, 9.5);
+            ctx.lineTo(-14, 30 * bankScale);
+            ctx.lineTo(-23, 30 * bankScale);
+            ctx.lineTo(-20, 10);
+            ctx.lineTo(-10, 9.5);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = '#94a3b8';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Wing panel lines & missile rail kanan
+            ctx.fillStyle = '#64748b';
+            ctx.fillRect(-24, 29.2 * bankScale, 12, 1.8);
+
+            // Blinking Nav Lights
+            var time = Date.now() * 0.008;
+            var blink = Math.sin(time * 5) > 0 ? 1 : 0.4;
+            ctx.fillStyle = 'rgba(239, 68, 68, ' + blink + ')';
+            ctx.beginPath();
+            ctx.arc(-23, -30 * bankScale, 2.5, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = 'rgba(255, 255, 255, ' + blink + ')';
+            ctx.beginPath();
+            ctx.arc(-23, 30 * bankScale, 2.5, 0, Math.PI * 2);
+            ctx.fill();
+
+            // 6. Horizontal Stabilators
+            ctx.fillStyle = '#dc2626';
+            ctx.beginPath();
+            ctx.moveTo(-22, -7);
+            ctx.lineTo(-39, -19 * bankScale);
+            ctx.lineTo(-43, -14 * bankScale);
+            ctx.lineTo(-34, -4);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = '#991b1b';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+
+            ctx.fillStyle = '#f1f5f9';
+            ctx.beginPath();
+            ctx.moveTo(-22, 7);
+            ctx.lineTo(-39, 19 * bankScale);
+            ctx.lineTo(-43, 14 * bankScale);
+            ctx.lineTo(-34, 4);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = '#cbd5e1';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+
+            // 7. F-15 Wedge Air Intakes
+            var intakeRed = ctx.createLinearGradient(16, 0, 16, -9.5);
+            intakeRed.addColorStop(0, '#dc2626');
+            intakeRed.addColorStop(1, '#991b1b');
+            ctx.fillStyle = intakeRed;
+            ctx.beginPath();
+            ctx.moveTo(24, -4.5);
+            ctx.lineTo(16, -9.5);
+            ctx.lineTo(0, -9.5);
+            ctx.lineTo(0, -4.5);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = '#7f1d1d';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+            ctx.fillStyle = '#1e1b4b';
+            ctx.beginPath();
+            ctx.moveTo(21, -5.2);
+            ctx.lineTo(17, -8.8);
+            ctx.lineTo(15, -8.8);
+            ctx.lineTo(19, -5.2);
+            ctx.closePath();
+            ctx.fill();
+
+            var intakeWhite = ctx.createLinearGradient(16, 0, 16, 9.5);
+            intakeWhite.addColorStop(0, '#ffffff');
+            intakeWhite.addColorStop(1, '#cbd5e1');
+            ctx.fillStyle = intakeWhite;
+            ctx.beginPath();
+            ctx.moveTo(24, 4.5);
+            ctx.lineTo(16, 9.5);
+            ctx.lineTo(0, 9.5);
+            ctx.lineTo(0, 4.5);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = '#94a3b8';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+            ctx.fillStyle = '#1e293b';
+            ctx.beginPath();
+            ctx.moveTo(21, 5.2);
+            ctx.lineTo(17, 8.8);
+            ctx.lineTo(15, 8.8);
+            ctx.lineTo(19, 5.2);
+            ctx.closePath();
+            ctx.fill();
+
+            // 8. Main Fuselage & Nacelles (Setengah Merah Setengah Putih)
+            var fuseRedGrad = ctx.createLinearGradient(0, 0, 0, -9.5);
+            fuseRedGrad.addColorStop(0, '#f43f5e');
+            fuseRedGrad.addColorStop(0.4, '#dc2626');
+            fuseRedGrad.addColorStop(1, '#991b1b');
+            ctx.fillStyle = fuseRedGrad;
+            ctx.beginPath();
+            ctx.moveTo(42, 0); // Moncong hidung F-15 aerodinamis membulat halus
+            ctx.bezierCurveTo(41.5, -2, 38, -3.2, 33, -3.8);
+            ctx.lineTo(24, -4.5);
+            ctx.lineTo(0, -4.5);
+            ctx.lineTo(-4, -8.5);
+            ctx.lineTo(-28, -8.5);
+            ctx.lineTo(-30, -3.5);
+            ctx.lineTo(-30, 0);
+            ctx.closePath();
+            ctx.fill();
+
+            var fuseWhiteGrad = ctx.createLinearGradient(0, 0, 0, 9.5);
+            fuseWhiteGrad.addColorStop(0, '#ffffff');
+            fuseWhiteGrad.addColorStop(0.4, '#f8fafc');
+            fuseWhiteGrad.addColorStop(1, '#cbd5e1');
+            ctx.fillStyle = fuseWhiteGrad;
+            ctx.beginPath();
+            ctx.moveTo(42, 0);
+            ctx.bezierCurveTo(41.5, 2, 38, 3.2, 33, 3.8);
+            ctx.lineTo(24, 4.5);
+            ctx.lineTo(0, 4.5);
+            ctx.lineTo(-4, 8.5);
+            ctx.lineTo(-28, 8.5);
+            ctx.lineTo(-30, 3.5);
+            ctx.lineTo(-30, 0);
+            ctx.closePath();
+            ctx.fill();
+
+            // Centerline Split 50:50
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(42, 0);
+            ctx.lineTo(-30, 0);
+            ctx.stroke();
+
+            // Radome Cap Curve
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+            ctx.lineWidth = 0.8;
+            ctx.beginPath();
+            ctx.arc(33, 0, 3.8, -Math.PI / 2, Math.PI / 2);
+            ctx.stroke();
+
+            // 9. Tall Twin Vertical Stabilizers
+            ctx.fillStyle = '#b91c1c';
+            ctx.beginPath();
+            ctx.moveTo(-16, -9.5);
+            ctx.lineTo(-33, -14 * bankScale);
+            ctx.lineTo(-37, -14 * bankScale);
+            ctx.lineTo(-32, -9);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = '#ef4444';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+
+            ctx.fillStyle = '#e2e8f0';
+            ctx.beginPath();
+            ctx.moveTo(-16, 9.5);
+            ctx.lineTo(-33, 14 * bankScale);
+            ctx.lineTo(-37, 14 * bankScale);
+            ctx.lineTo(-32, 9);
+            ctx.closePath();
+            ctx.fill();
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+
+            // 10. Tandem Bubble Cockpit Canopy
+            ctx.save();
+            var glassLeft = ctx.createLinearGradient(34, 0, 8, -3.2);
+            glassLeft.addColorStop(0, '#fb7185');
+            glassLeft.addColorStop(0.5, '#0284c7');
+            glassLeft.addColorStop(1, '#0f172a');
+            ctx.fillStyle = glassLeft;
+            ctx.beginPath();
+            ctx.moveTo(34, 0);
+            ctx.quadraticCurveTo(22, -3.8, 8, -2.4);
+            ctx.lineTo(8, 0);
+            ctx.closePath();
+            ctx.fill();
+
+            var glassRight = ctx.createLinearGradient(34, 0, 8, 3.2);
+            glassRight.addColorStop(0, '#38bdf8');
+            glassRight.addColorStop(0.5, '#0ea5e9');
+            glassRight.addColorStop(1, '#0f172a');
+            ctx.fillStyle = glassRight;
+            ctx.beginPath();
+            ctx.moveTo(34, 0);
+            ctx.quadraticCurveTo(22, 3.8, 8, 2.4);
+            ctx.lineTo(8, 0);
+            ctx.closePath();
+            ctx.fill();
+
+            // Pilots
+            ctx.fillStyle = '#1e293b';
+            ctx.beginPath();
+            ctx.arc(24, 0, 1.5, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(14, 0, 1.5, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Canopy frame ribs
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.lineWidth = 0.8;
+            ctx.beginPath();
+            ctx.moveTo(28, -2.6);
+            ctx.lineTo(28, 2.6);
+            ctx.moveTo(19, -3.4);
+            ctx.lineTo(19, 3.4);
+            ctx.stroke();
+
+            // Reflection glare
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.beginPath();
+            ctx.ellipse(23, -1, 8, 1, -0.05, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+
+            // HUD Green Dot
+            ctx.fillStyle = '#22c55e';
+            ctx.beginPath();
+            ctx.arc(29, 0, 1.3, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.restore();
+        }
+
+        function loaderRoundRectPath(c, x, y, w, h, r) {
+            c.moveTo(x + r, y);
+            c.lineTo(x + w - r, y);
+            c.quadraticCurveTo(x + w, y, x + w, y + r);
+            c.lineTo(x + w, y + h - r);
+            c.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+            c.lineTo(x + r, y + h);
+            c.quadraticCurveTo(x, y + h, x, y + h - r);
+            c.lineTo(x, y + r);
+            c.quadraticCurveTo(x, y, x + r, y);
+        }
+
+        // Animation - First Page Load (Supersonic F-15 Fighter Jet Flyby)
+        function initLoaderHome() {
             var tl = gsap.timeline();
 
             tl.set(".loading-screen", {
@@ -546,10 +1121,10 @@
                 });
             }
 
-            tl.set(".loader-bento-card", {
+            tl.set(".loader-welcome-wrap", {
                 opacity: 0,
-                y: 30,
-                scale: 0.96
+                scale: 0.9,
+                y: 15
             });
 
             if ($(window).width() > 540) {
@@ -572,61 +1147,49 @@
                 }
             });
 
-            // Card entrance
-            tl.to(".loader-bento-card", {
-                duration: 0.5,
+            // 1. TAHAP PERTAMA: MUNCUL UCAPAN "SELAMAT DATANG" BESAR DI TENGAH LAYAR
+            tl.to(".loader-welcome-wrap", {
+                duration: 0.8,
                 opacity: 1,
-                y: 0,
                 scale: 1,
+                y: 0,
                 ease: "power3.out",
-                delay: 0.1
+                delay: 0.15
             });
 
-            // Counter & progress bar
-            var counterObj = { val: 0 };
-            var statusEl = document.querySelector(".loader-status");
-            var numEl = document.querySelector(".loader-number");
-            var barEl = document.querySelector(".loader-progress-bar");
+            // Tahan sejenak agar user membaca ucapan "SELAMAT DATANG" (~0.75s) SEBELUM pesawat muncul
+            tl.to({}, { duration: 0.75 });
 
-            tl.to(counterObj, {
-                duration: 1.3,
-                val: 100,
-                ease: "power2.inOut",
-                onUpdate: function () {
-                    var current = Math.floor(counterObj.val);
-                    if (numEl) numEl.textContent = current;
-                    if (barEl) barEl.style.width = current + "%";
-                    if (statusEl) {
-                        if (current > 75) {
-                            statusEl.textContent = "Ready";
-                        } else if (current > 35) {
-                            statusEl.textContent = "Loading Web Environment";
-                        }
-                    }
-                }
-            }, "=-0.2");
+            // 2. TAHAP KEDUA: BARU PESAWAT MUNCUL & MELUNCUR DARI PINGGIR LAYAR!
+            tl.call(function () {
+                startLoaderJetFlyby();
+            });
 
-            // Exit animation
-            tl.to(".loader-bento-card", {
-                duration: 0.4,
-                scale: 0.94,
+            // Pesawat meluncur pelan melewati ucapan (1.15s)
+            tl.to({}, { duration: 1.15 });
+
+            // Begitu pesawat melesat kencang (Afterburner Mach 2.8), ucapan memudar tersapu dorongan jet
+            tl.to(".loader-welcome-wrap", {
+                duration: 0.45,
                 opacity: 0,
-                y: -20,
-                ease: "power2.in",
-                delay: 0.1
+                scale: 1.05,
+                ease: "power2.in"
             });
+
+            // Sisa durasi penerbangan pesawat keluar layar (0.3s)
+            tl.to({}, { duration: 0.3 });
 
             tl.to(".loading-screen", {
-                duration: 0.8,
+                duration: 0.85,
                 top: "-100%",
                 ease: "Power4.easeInOut"
-            }, "=-0.2");
+            }, "=-0.15");
 
             tl.to(".loading-screen .rounded-div-wrap.bottom", {
-                duration: 1,
+                duration: 0.95,
                 height: "0vh",
                 ease: "Power4.easeInOut"
-            }, "=-0.8");
+            }, "=-0.85");
 
             tl.set(".loading-screen", {
                 top: "calc(-100%)"
@@ -960,6 +1523,14 @@
                 scroll = new LocomotiveScroll({
                     el: container.querySelector('[data-scroll-container]'),
                     smooth: true,
+                    multiplier: 1.0,
+                    lerp: 0.08,
+                    smartphone: {
+                        smooth: true
+                    },
+                    tablet: {
+                        smooth: true
+                    }
                 });
 
                 window.onresize = scroll.update();
@@ -996,7 +1567,98 @@
 
                 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
                 ScrollTrigger.refresh();
+
+                initHeroSectionSnap();
             }
+        }
+
+        // Section Snap Scroll: Ultra-Smooth, responsive, and lightweight transition
+        function initHeroSectionSnap() {
+            if (window.__heroSnapInitialized) return;
+            window.__heroSnapInitialized = true;
+
+            let isSnapping = false;
+            let touchStartY = 0;
+
+            function getScrollTop() {
+                if (typeof scroll !== 'undefined' && scroll && scroll.scroll && scroll.scroll.instance) {
+                    return scroll.scroll.instance.scroll.y;
+                }
+                return window.pageYOffset || document.documentElement.scrollTop || 0;
+            }
+
+            function doSnap(target, duration = 650) {
+                if (isSnapping) return;
+                isSnapping = true;
+
+                if (typeof scroll !== 'undefined' && scroll && scroll.scrollTo) {
+                    scroll.scrollTo(target, {
+                        offset: 0,
+                        duration: duration,
+                        easing: [0.25, 1, 0.5, 1] // fluid cubic easeOut: effortless, light & buttery smooth
+                    });
+                } else {
+                    const targetEl = typeof target === 'string' ? document.querySelector(target) : target;
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                    } else if (target === 0 || target === 'top') {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }
+
+                setTimeout(() => {
+                    isSnapping = false;
+                }, duration + 80);
+            }
+
+            // Wheel event (Desktop mousewheel / trackpad)
+            window.addEventListener('wheel', (e) => {
+                if (isSnapping) return;
+
+                const hero = document.querySelector('.home-header');
+                const work = document.querySelector('#work-section');
+                if (!hero || !work) return;
+
+                const currentY = getScrollTop();
+                const heroHeight = hero.offsetHeight;
+
+                // When in the hero section and user scrolls down
+                if (currentY < heroHeight * 0.35 && e.deltaY > 8) {
+                    e.preventDefault();
+                    doSnap(work, 650);
+                }
+                // When near the top of the work section and user scrolls up
+                else if (currentY >= heroHeight * 0.75 && currentY <= heroHeight * 1.25 && e.deltaY < -8) {
+                    e.preventDefault();
+                    doSnap(0, 650);
+                }
+            }, { passive: false });
+
+            // Touch events (Mobile swipe)
+            window.addEventListener('touchstart', (e) => {
+                if (e.touches && e.touches.length) {
+                    touchStartY = e.touches[0].clientY;
+                }
+            }, { passive: true });
+
+            window.addEventListener('touchend', (e) => {
+                if (isSnapping) return;
+
+                const hero = document.querySelector('.home-header');
+                const work = document.querySelector('#work-section');
+                if (!hero || !work) return;
+
+                const touchEndY = (e.changedTouches && e.changedTouches.length) ? e.changedTouches[0].clientY : touchStartY;
+                const diffY = touchStartY - touchEndY;
+                const currentY = getScrollTop();
+                const heroHeight = hero.offsetHeight;
+
+                if (currentY < heroHeight * 0.35 && diffY > 25) {
+                    doSnap(work, 600);
+                } else if (currentY >= heroHeight * 0.75 && currentY <= heroHeight * 1.25 && diffY < -25) {
+                    doSnap(0, 600);
+                }
+            }, { passive: true });
         }
 
         function initNextWord(data) {
@@ -2091,10 +2753,43 @@
 
         $(document).ready(function () {
             initMinimalistAnimations();
+            initHeroSectionSnap();
         });
 
 
     </script>
+
+    <!-- Project Detail Modal Dialog -->
+    <div class="project-modal-backdrop" id="projectDetailModal" aria-hidden="true" role="dialog">
+        <div class="project-modal-dialog">
+            <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup Detail Project">✕</button>
+            <div class="modal-header-meta">
+                <span class="modal-tag" id="modalProjectTag">Fintech / Full-Stack</span>
+                <h2 class="modal-title" id="modalProjectTitle">Payme: E-Wallet Proof of Concept</h2>
+            </div>
+            <div class="modal-gallery-wrap">
+                <div class="modal-main-img-frame">
+                    <img id="modalGalleryMain" src="images/project/project1/1.webp" alt="Screenshot Project Utama" loading="lazy">
+                </div>
+                <div class="modal-thumbs-row" id="modalGalleryThumbs">
+                    <!-- Dynamic thumbnails -->
+                </div>
+            </div>
+            <div class="modal-body-content">
+                <h4>Deskripsi &amp; Arsitektur Project</h4>
+                <p id="modalProjectDesc">Deskripsi lengkap dari project.</p>
+                <h4>Teknologi &amp; Tools</h4>
+                <div class="modal-tech-list" id="modalTechList">
+                    <!-- Dynamic badges -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Drive Interactive Engine -->
+    <script src="scripts/project-drive.js"></script>
+    <!-- Works 3D Curved Cylindrical Carousel Engine (Raphael Segerman style) -->
+    <script src="scripts/works-3d-carousel.js"></script>
 </body>
 
 </html>
