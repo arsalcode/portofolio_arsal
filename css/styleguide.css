@@ -2,7 +2,7 @@
 
 /* ------------------------- Fonts -------------------------------------------------- */
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100..900&display=swap");
 
 /* ------------------------- Colors -------------------------------------------------- */
 
@@ -76,7 +76,7 @@ ul {
 
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: "Outfit", sans-serif; 
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
   color: var(--color-text);
   line-height: 1.6;
   font-weight: 450;
@@ -164,8 +164,8 @@ strong:last-child {
 }
 
 h1 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 450;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: clamp(3.25em, 7vw, 8em);
   line-height: 1.065;
@@ -174,8 +174,8 @@ h1 {
 }
 
 h2 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 450;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: calc(clamp(3.25em, 5vw, 4.5em) * 0.75);
   line-height: 1.065;
@@ -183,8 +183,8 @@ h2 {
 }
 
 h3 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 450;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
   font-style: normal;
   font-size: clamp(2.66em, 4.65vw, 5.32em);
   line-height: 1.065;
@@ -192,8 +192,8 @@ h3 {
 }
 
 h4 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 450;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
   font-style: normal;
   font-size: clamp(1.55em, 2.3vw, 2.5em);
   line-height: 1.45;
@@ -201,8 +201,8 @@ h4 {
 }
 
 h5 {
-  font-family: "Outfit", sans-serif;
-  font-weight: 450;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
   font-style: normal;
   font-size: 0.6em;
   line-height: 1.065;
@@ -213,7 +213,7 @@ h5 {
 }
 
 p {
-  font-family: "Outfit", sans-serif;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 450;
   font-style: normal;
   color: var(--text);

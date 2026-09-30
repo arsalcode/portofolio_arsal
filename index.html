@@ -88,10 +88,9 @@
                             </a>
                         </li>
                         <li class="btn btn-link">
-                            <a href="/" class="btn-click magnetic" data-strength="24" data-strength-text="12">
+                            <a href="#about-section" data-scroll-to class="btn-click magnetic" data-strength="24" data-strength-text="12">
                                 <span class="btn-text">
-                                    <span class="btn-text-inner">About <small
-                                            style="font-size: 1rem; color: grey;">(Coming soon)</small></span>
+                                    <span class="btn-text-inner">About</span>
                                 </span>
                             </a>
                         </li>
@@ -146,7 +145,7 @@
                         <div class="btn">
                             <a href="index.html" class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                 <span class="btn-text">
-                                    <span class="nav-brand-text">© Code by Arsal</span>
+                                    <span class="nav-brand-text">© Arsal.  dev</span>
                                 </span>
                             </a>
                         </div>
@@ -162,7 +161,7 @@
                                 </a>
                             </li>
                             <li class="btn btn-link">
-                                <a href="/" class="btn-click magnetic" data-strength="20" data-strength-text="10">
+                                <a href="#about-section" data-scroll-to class="btn-click magnetic" data-strength="20" data-strength-text="10">
                                     <span class="btn-text">
                                         <span class="btn-text-inner">About</span>
                                     </span>
@@ -203,14 +202,7 @@
                                 Full-Stack & Web Developer
                             </h2>
 
-                            <div class="hero-arrow-wrap">
-                                <a href="#work-section" data-scroll-to class="hero-arrow-btn" aria-label="Lihat Karya">
-                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                                        <polyline points="7 7 17 7 17 17"></polyline>
-                                    </svg>
-                                </a>
-                            </div>
+                            
                         </div>
 
                         <!-- Right Profile Cutout (No Box Frame) -->
@@ -283,173 +275,665 @@
                     </div>
                 </div>
 
-                <div class="works-carousel-wrapper fade-in animate">
-                    <!-- Carousel Top Header Controls -->
-                    <div class="works-carousel-controls">
-                        <div class="carousel-counter-badge">
-                            <span class="carousel-current" id="carouselCurrentNum">01</span>
-                            <span class="carousel-divider">/</span>
-                            <span class="carousel-total">04</span>
-                        </div>
-                        <div class="carousel-drag-tip">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16"/><path d="M6 8L2 12L6 16"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-                            <span>Geser / Drag untuk navigasi 3D karya</span>
-                        </div>
-                        <div class="carousel-nav-arrows">
-                            <button type="button" class="carousel-arrow-btn prev" id="carouselPrevBtn" aria-label="Previous project">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                            </button>
-                            <button type="button" class="carousel-arrow-btn next" id="carouselNextBtn" aria-label="Next project">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- 3D Cylindrical Viewport Stage -->
-                    <div class="works-3d-stage" id="works3DStage">
-                        <div class="works-3d-track" id="works3DTrack">
+                <!-- Continuous Infinite Marquee Project Showcase (Autoplay & Pause on Cursor Hover) -->
+                <div class="works-marquee-wrapper fade-in animate" id="worksMarqueeWrapper">
+                    <!-- Row 1 (Right to Left) -->
+                    <div class="works-marquee-track marquee-row-1" id="worksMarqueeTrack1">
+                        <!-- Group 1 -->
+                        <div class="works-marquee-group">
                             <!-- Card 1: Payme E-Wallet -->
-                            <div class="work-card card-3d" data-index="0">
-                                <div class="work-gallery">
-                                    <div class="work-img-frame">
-                                        <img class="work-main-image" src="images/project/project1/1.webp" alt="Payme e-wallet interface" loading="lazy">
-                                        <div class="work-card-glass-badge">
-                                            <span class="badge-dot"></span>
-                                            <span>Fintech PoC</span>
+                            <div class="work-card marquee-card" data-index="0" title="Klik untuk buka detail Payme">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/1.webp" alt="Payme Beranda Saldo" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/2.webp" alt="Payme Riwayat Mutasi" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/4.webp" alt="Payme Transfer & Kontak" loading="lazy">
                                         </div>
                                     </div>
-                                    <div class="work-gallery-thumbs" aria-label="Payme project screenshots">
-                                        <img class="thumb-item active" src="images/project/project1/1.webp" alt="Payme screenshot 1" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project1/2.webp" alt="Payme screenshot 2" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project1/3.webp" alt="Payme screenshot 3" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project1/4.webp" alt="Payme screenshot 4" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project1/5.webp" alt="Payme screenshot 5" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project1/6.webp" alt="Payme screenshot 6" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project1/7.webp" alt="Payme screenshot 7" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <div class="work-meta">
-                                        <span class="proj-tag tag-laravel">Fintech / Full-Stack</span>
-                                        <span class="work-year">2026</span>
-                                    </div>
-                                    <h3 class="work-title">Payme: E-Wallet Proof of Concept (PoC) &amp; Central Back-Office</h3>
-                                    <p class="work-desc">Prototype ekosistem dompet digital end-to-end dengan simulasi transaksi peer-to-peer, pembelian paket data, riwayat mutasi saldo, serta dashboard admin KYC.</p>
-                                    <div class="work-card-actions">
-                                        <button type="button" class="work-detail-btn" data-project-id="1">
-                                            <span>Buka Detail Proyek</span>
-                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                                        </button>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Fintech PoC</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 2: Floral E-Commerce -->
-                            <div class="work-card card-3d" data-index="1">
-                                <div class="work-gallery">
-                                    <div class="work-img-frame">
-                                        <img class="work-main-image" src="images/project/project2/1.webp" alt="Floral e-commerce catalog" loading="lazy">
-                                        <div class="work-card-glass-badge">
-                                            <span class="badge-dot"></span>
-                                            <span>E-Commerce</span>
-                                        </div>
+                            <div class="work-card marquee-card" data-index="1" title="Klik untuk buka detail Hasna Florist">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-web-desktop">
+                                        <img src="images/project/project2/1.webp" alt="Hasna Floris Online Flower Shop" loading="lazy">
                                     </div>
-                                    <div class="work-gallery-thumbs" aria-label="Floral project screenshots">
-                                        <img class="thumb-item active" src="images/project/project2/1.webp" alt="Floral screenshot 1" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project2/2.webp" alt="Floral screenshot 2" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project2/3.webp" alt="Floral screenshot 3" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <div class="work-meta">
-                                        <span class="proj-tag tag-flutter">E-Commerce / WhatsApp</span>
-                                        <span class="work-year">2026</span>
-                                    </div>
-                                    <h3 class="work-title">Floral E-Commerce &amp; WhatsApp Integration Platform</h3>
-                                    <p class="work-desc">Katalog interaktif bunga papan, standing flower, table flower, dan hand bouquet dengan product image zoom serta integrasi click-to-chat WhatsApp instan.</p>
-                                    <div class="work-card-actions">
-                                        <button type="button" class="work-detail-btn" data-project-id="2">
-                                            <span>Buka Detail Proyek</span>
-                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                                        </button>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>E-Commerce Web</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 3: Herbal AI -->
-                            <div class="work-card card-3d" data-index="2">
-                                <div class="work-gallery">
-                                    <div class="work-img-frame">
-                                        <img class="work-main-image" src="images/project/project3/1.webp" alt="Herbal AI application" loading="lazy">
-                                        <div class="work-card-glass-badge">
-                                            <span class="badge-dot"></span>
-                                            <span>AI Vision &amp; NLP</span>
+                            <div class="work-card marquee-card" data-index="2" title="Klik untuk buka detail Herbal Nusantara">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/1.webp" alt="Herbal Nusantara Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/2.webp" alt="Eksplorasi Tanaman Herbal" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/3.webp" alt="Profil Pengguna Herbal" loading="lazy">
                                         </div>
                                     </div>
-                                    <div class="work-gallery-thumbs" aria-label="Herbal AI project screenshots">
-                                        <img class="thumb-item active" src="images/project/project3/1.webp" alt="Herbal AI screenshot 1" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project3/2.webp" alt="Herbal AI screenshot 2" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project3/3.webp" alt="Herbal AI screenshot 3" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project3/4.webp" alt="Herbal AI screenshot 4" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <div class="work-meta">
-                                        <span class="proj-tag tag-ml">AI / NLP / Computer Vision</span>
-                                        <span class="work-year">2026</span>
-                                    </div>
-                                    <h3 class="work-title">Sistem Konsultasi Herbal Tradisional berbasis AI</h3>
-                                    <p class="work-desc">Aplikasi cerdas IndoBERT Voice Chat dan Computer Vision YOLO untuk identifikasi tanaman herbal real-time dengan basis pengetahuan BALITTRO.</p>
-                                    <div class="work-card-actions">
-                                        <button type="button" class="work-detail-btn" data-project-id="3">
-                                            <span>Buka Detail Proyek</span>
-                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                                        </button>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>AI Vision &amp; NLP</span>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 4: ZISmart Mobile -->
-                            <div class="work-card card-3d" data-index="3">
-                                <div class="work-gallery">
-                                    <div class="work-img-frame">
-                                        <img class="work-main-image" src="images/project/project4/1.webp" alt="ZISmart mobile application" loading="lazy">
-                                        <div class="work-card-glass-badge">
-                                            <span class="badge-dot"></span>
-                                            <span>Mobile &amp; Chatbot</span>
+                            <div class="work-card marquee-card" data-index="3" title="Klik untuk buka detail ZISmart">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/1.webp" alt="ZISmart Donasi Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/2.webp" alt="Chatbot Interaktif Zakat" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/3.webp" alt="Kalkulator ZISmart" loading="lazy">
                                         </div>
                                     </div>
-                                    <div class="work-gallery-thumbs" aria-label="ZISmart project screenshots">
-                                        <img class="thumb-item active" src="images/project/project4/1.webp" alt="ZISmart screenshot 1" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project4/2.webp" alt="ZISmart screenshot 2" loading="lazy">
-                                        <img class="thumb-item" src="images/project/project4/3.webp" alt="ZISmart screenshot 3" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="work-card-content">
-                                    <div class="work-meta">
-                                        <span class="proj-tag tag-laravel">Mobile / Chatbot</span>
-                                        <span class="work-year">2026</span>
-                                    </div>
-                                    <h3 class="work-title">ZISmart: Zakat Management Mobile App &amp; Chatbot Integration</h3>
-                                    <p class="work-desc">Aplikasi mobile kalkulator zakat otomatis dengan chatbot interaktif, performa optimal pada Android 12–14, terpublikasi dalam jurnal ilmiah.</p>
-                                    <div class="work-card-actions">
-                                        <button type="button" class="work-detail-btn" data-project-id="4">
-                                            <span>Buka Detail Proyek</span>
-                                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                                        </button>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Mobile &amp; Chatbot</span>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Repeat sequence in Group 1 for dense seamless track -->
+                            <div class="work-card marquee-card" data-index="0" title="Klik untuk buka detail Payme">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/1.webp" alt="Payme Beranda Saldo" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/2.webp" alt="Payme Riwayat Mutasi" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/4.webp" alt="Payme Transfer & Kontak" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Fintech PoC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="1" title="Klik untuk buka detail Hasna Florist">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-web-desktop">
+                                        <img src="images/project/project2/1.webp" alt="Hasna Floris Online Flower Shop" loading="lazy">
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>E-Commerce Web</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="2" title="Klik untuk buka detail Herbal Nusantara">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/1.webp" alt="Herbal Nusantara Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/2.webp" alt="Eksplorasi Tanaman Herbal" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/3.webp" alt="Profil Pengguna Herbal" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>AI Vision &amp; NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="3" title="Klik untuk buka detail ZISmart">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/1.webp" alt="ZISmart Donasi Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/2.webp" alt="Chatbot Interaktif Zakat" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/3.webp" alt="Kalkulator ZISmart" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Mobile &amp; Chatbot</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Group 2 (Clone for infinite seamless loop) -->
+                        <div class="works-marquee-group" aria-hidden="true">
+                            <div class="work-card marquee-card" data-index="0" title="Klik untuk buka detail Payme">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/1.webp" alt="Payme Beranda Saldo" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/2.webp" alt="Payme Riwayat Mutasi" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/4.webp" alt="Payme Transfer & Kontak" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Fintech PoC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="1" title="Klik untuk buka detail Hasna Florist">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-web-desktop">
+                                        <img src="images/project/project2/1.webp" alt="Hasna Floris Online Flower Shop" loading="lazy">
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>E-Commerce Web</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="2" title="Klik untuk buka detail Herbal Nusantara">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/1.webp" alt="Herbal Nusantara Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/2.webp" alt="Eksplorasi Tanaman Herbal" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/3.webp" alt="Profil Pengguna Herbal" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>AI Vision &amp; NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="3" title="Klik untuk buka detail ZISmart">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/1.webp" alt="ZISmart Donasi Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/2.webp" alt="Chatbot Interaktif Zakat" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/3.webp" alt="Kalkulator ZISmart" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Mobile &amp; Chatbot</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="0" title="Klik untuk buka detail Payme">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/1.webp" alt="Payme Beranda Saldo" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/2.webp" alt="Payme Riwayat Mutasi" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/4.webp" alt="Payme Transfer & Kontak" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Fintech PoC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="1" title="Klik untuk buka detail Hasna Florist">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-web-desktop">
+                                        <img src="images/project/project2/1.webp" alt="Hasna Floris Online Flower Shop" loading="lazy">
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>E-Commerce Web</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="2" title="Klik untuk buka detail Herbal Nusantara">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/1.webp" alt="Herbal Nusantara Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/2.webp" alt="Eksplorasi Tanaman Herbal" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/3.webp" alt="Profil Pengguna Herbal" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>AI Vision &amp; NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="3" title="Klik untuk buka detail ZISmart">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/1.webp" alt="ZISmart Donasi Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/2.webp" alt="Chatbot Interaktif Zakat" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/3.webp" alt="Kalkulator ZISmart" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Mobile &amp; Chatbot</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Interactive Indicator Dots -->
-                    <div class="carousel-indicators" id="carouselIndicators">
-                        <button type="button" class="indicator-dot active" data-index="0" aria-label="Project 1: Payme"></button>
-                        <button type="button" class="indicator-dot" data-index="1" aria-label="Project 2: Floral E-Commerce"></button>
-                        <button type="button" class="indicator-dot" data-index="2" aria-label="Project 3: Herbal AI"></button>
-                        <button type="button" class="indicator-dot" data-index="3" aria-label="Project 4: ZISmart"></button>
+                    <!-- Marquee Row 2 (Counter-Scrolling Left to Right) -->
+                    <div class="works-marquee-track marquee-row-2" id="worksMarqueeTrack2">
+                        <!-- Group 1 -->
+                        <div class="works-marquee-group">
+                            <!-- Card 3: Herbal AI -->
+                            <div class="work-card marquee-card" data-index="2" title="Klik untuk buka detail Herbal Nusantara">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/1.webp" alt="Herbal Nusantara Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/2.webp" alt="Eksplorasi Tanaman Herbal" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/3.webp" alt="Profil Pengguna Herbal" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>AI Vision &amp; NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: ZISmart Mobile -->
+                            <div class="work-card marquee-card" data-index="3" title="Klik untuk buka detail ZISmart">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/1.webp" alt="ZISmart Donasi Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/2.webp" alt="Chatbot Interaktif Zakat" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/3.webp" alt="Kalkulator ZISmart" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Mobile &amp; Chatbot</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 1: Payme E-Wallet -->
+                            <div class="work-card marquee-card" data-index="0" title="Klik untuk buka detail Payme">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/1.webp" alt="Payme Beranda Saldo" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/2.webp" alt="Payme Riwayat Mutasi" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/4.webp" alt="Payme Transfer & Kontak" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Fintech PoC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Floral E-Commerce -->
+                            <div class="work-card marquee-card" data-index="1" title="Klik untuk buka detail Hasna Florist">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-web-desktop">
+                                        <img src="images/project/project2/1.webp" alt="Hasna Floris Online Flower Shop" loading="lazy">
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>E-Commerce Web</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Repeat sequence in Group 1 -->
+                            <div class="work-card marquee-card" data-index="2" title="Klik untuk buka detail Herbal Nusantara">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/1.webp" alt="Herbal Nusantara Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/2.webp" alt="Eksplorasi Tanaman Herbal" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/3.webp" alt="Profil Pengguna Herbal" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>AI Vision &amp; NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="3" title="Klik untuk buka detail ZISmart">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/1.webp" alt="ZISmart Donasi Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/2.webp" alt="Chatbot Interaktif Zakat" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/3.webp" alt="Kalkulator ZISmart" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Mobile &amp; Chatbot</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="0" title="Klik untuk buka detail Payme">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/1.webp" alt="Payme Beranda Saldo" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/2.webp" alt="Payme Riwayat Mutasi" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/4.webp" alt="Payme Transfer & Kontak" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Fintech PoC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="1" title="Klik untuk buka detail Hasna Florist">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-web-desktop">
+                                        <img src="images/project/project2/1.webp" alt="Hasna Floris Online Flower Shop" loading="lazy">
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>E-Commerce Web</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Group 2 (Clone for infinite seamless loop) -->
+                        <div class="works-marquee-group" aria-hidden="true">
+                            <div class="work-card marquee-card" data-index="2" title="Klik untuk buka detail Herbal Nusantara">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/1.webp" alt="Herbal Nusantara Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/2.webp" alt="Eksplorasi Tanaman Herbal" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/3.webp" alt="Profil Pengguna Herbal" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>AI Vision &amp; NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="3" title="Klik untuk buka detail ZISmart">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/1.webp" alt="ZISmart Donasi Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/2.webp" alt="Chatbot Interaktif Zakat" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/3.webp" alt="Kalkulator ZISmart" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Mobile &amp; Chatbot</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="0" title="Klik untuk buka detail Payme">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/1.webp" alt="Payme Beranda Saldo" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/2.webp" alt="Payme Riwayat Mutasi" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/4.webp" alt="Payme Transfer & Kontak" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Fintech PoC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="1" title="Klik untuk buka detail Hasna Florist">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-web-desktop">
+                                        <img src="images/project/project2/1.webp" alt="Hasna Floris Online Flower Shop" loading="lazy">
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>E-Commerce Web</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="2" title="Klik untuk buka detail Herbal Nusantara">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/1.webp" alt="Herbal Nusantara Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/2.webp" alt="Eksplorasi Tanaman Herbal" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project3/3.webp" alt="Profil Pengguna Herbal" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>AI Vision &amp; NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="3" title="Klik untuk buka detail ZISmart">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/1.webp" alt="ZISmart Donasi Beranda" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/2.webp" alt="Chatbot Interaktif Zakat" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project4/3.webp" alt="Kalkulator ZISmart" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Mobile &amp; Chatbot</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="0" title="Klik untuk buka detail Payme">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-mobile-trio">
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/1.webp" alt="Payme Beranda Saldo" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/2.webp" alt="Payme Riwayat Mutasi" loading="lazy">
+                                        </div>
+                                        <div class="showcase-phone-screen">
+                                            <img src="images/project/project1/4.webp" alt="Payme Transfer & Kontak" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>Fintech PoC</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="work-card marquee-card" data-index="1" title="Klik untuk buka detail Hasna Florist">
+                                <div class="work-device-showcase">
+                                    <div class="showcase-web-desktop">
+                                        <img src="images/project/project2/1.webp" alt="Hasna Floris Online Flower Shop" loading="lazy">
+                                    </div>
+                                    <div class="work-card-glass-badge">
+                                        <span class="badge-dot"></span>
+                                        <span>E-Commerce Web</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 ABOUT SECTION (Clean Minimalist Editorial - No Photo)
+                 ========================================== -->
+            <section class="section about-simple-section theme-dark" id="about-section" data-scroll-section>
+                <div class="container medium">
+                    <div class="about-editorial-box fade-in animate">
+                        <div class="about-editorial-grid">
+                            <!-- Kolom Kiri: Bio Paragraf -->
+                            <div class="about-col-left">
+                                <h2 class="about-title-simple">About</h2>
+
+                                <div class="about-simple-body">
+                                    <p class="about-simple-text">
+                                        Halo! Saya <strong>Muhammad Arsal</strong>, seorang Web &amp; Mobile Developer yang berbasis di Indonesia. Saya fokus merancang dan membangun sistem digital yang andal—mulai dari arsitektur backend yang aman dan efisien, hingga antarmuka web dan aplikasi mobile yang mulus serta intuitif.
+                                    </p>
+                                    <p class="about-simple-text">
+                                        Spesialisasi utama saya berfokus pada ekosistem <strong>Laravel &amp; Supabase</strong> untuk perancangan database dan RESTful APIs, interaktivitas frontend modern (JavaScript ES6+), serta pengembangan aplikasi mobile lintas platform dengan <strong>Flutter</strong>.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Kolom Kanan: List Teknologi dengan Garis Hijau Vertikal & Gerak Berurutan -->
+                            <div class="about-col-right">
+                                <ul class="about-bullet-list">
+                                    <li class="about-stack-item">
+                                        <span class="stack-node"></span>
+                                        <span class="stack-name">Laravel</span>
+                                    </li>
+                                    <li class="about-stack-item">
+                                        <span class="stack-node"></span>
+                                        <span class="stack-name">JavaScript (ES6+)</span>
+                                    </li>
+                                    <li class="about-stack-item">
+                                        <span class="stack-node"></span>
+                                        <span class="stack-name">Supabase</span>
+                                    </li>
+                                    <li class="about-stack-item">
+                                        <span class="stack-node"></span>
+                                        <span class="stack-name">Flutter</span>
+                                    </li>
+                                    <li class="about-stack-item">
+                                        <span class="stack-node"></span>
+                                        <span class="stack-name">RESTful API</span>
+                                    </li>
+                                    <li class="about-stack-item">
+                                        <span class="stack-node"></span>
+                                        <span class="stack-name">MySQL</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -458,14 +942,9 @@
             <div class="footer-wrap section-awwwards-footer" id="contact-section" data-scroll-section>
                 <footer class="section mx-auto footer-modern" style="width: 100vw !important;">
                     <div class="container medium">
-                        <!-- Top Banner CTA -->
+                        <!-- Top Banner CTA (Minimalist Open Style) -->
                         <div class="footer-cta-card">
-                            <div class="footer-badge-pill">
-                                <span class="status-dot"></span> Tersedia untuk kolaborasi & proyek baru
-                            </div>
-                            <h2 class="footer-cta-heading">
-                                Mari wujudkan proyek <span class="text-highlight-blue">luar biasa</span> bersama.
-                            </h2>
+                            <h2 class="footer-cta-heading">Let's Connect</h2>
 
                             <div class="footer-contact-actions">
                                 <a href="mailto:arsalcode404@gmail.com" class="footer-email-btn magnetic"
@@ -498,7 +977,7 @@
                             </div>
                             <div class="footer-meta-col text-right">
                                 <h5>HAK CIPTA</h5>
-                                <p>© 2026 Muhammad Arsal</p>
+                                <p>© 2026 Muhammad Arsal, S.kom</p>
                             </div>
                         </div>
                     </div>
