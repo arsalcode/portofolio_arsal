@@ -692,7 +692,8 @@
     if (hudDesc) hudDesc.textContent = proj.shortDesc;
 
     if (hudTags) {
-      hudTags.innerHTML = proj.tech.map(t => `<span class="hud-tech-pill">${t}</span>`).join('');
+      hudTags.innerHTML = '';
+      hudTags.style.display = 'none';
     }
 
     // Dynamic vertical positioning directly aligned with active pin & runway
