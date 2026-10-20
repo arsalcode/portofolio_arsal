@@ -945,6 +945,10 @@ main.touch .main-wrap {
   color: #c5c7cb;
   max-width: 480px;
   margin: 0;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: none;
 }
 
 .hero-role-sub {
