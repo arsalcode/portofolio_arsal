@@ -269,8 +269,37 @@ main.touch .main-wrap {
   transition: color 0.25s ease;
 }
 
-.nav-bar .nav-links-pill .btn-link .btn-click::after {
-  display: none;
+.nav-bar .nav-links-pill .btn-link:not(.btn-menu) .btn-click {
+  position: relative;
+}
+
+.nav-bar .nav-links-pill .btn-link:not(.btn-menu) .btn-click::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-blue, #00804e);
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+.nav-bar .nav-links-pill .btn-link:not(.btn-menu) .btn-click:hover::after,
+.nav-bar .nav-links-pill .btn-link:not(.btn-menu).active .btn-click::after {
+  transform: translateX(-50%) scale(1);
+}
+
+.nav-bar .nav-links-pill .links-wrap:hover .btn-link:not(.btn-menu) .btn-click::after {
+  transform: translateX(-50%) scale(0);
+}
+
+.nav-bar .nav-links-pill .links-wrap:hover .btn-link:not(.btn-menu) .btn-click:hover::after {
+  transform: translateX(-50%) scale(1);
 }
 
 .nav-bar .nav-links-pill .btn-link .btn-text {
@@ -3896,18 +3925,15 @@ main.touch .main-wrap {
 
 .work-card.marquee-card {
   position: relative;
-  /* ATUR LEBAR (WIDTH) CARD DI SINI: */
-  width: clamp(260px, 22vw, 320px);
-  /* (Opsional) ATUR TINGGI (HEIGHT) CARD JIKA INGIN TINGGI TETAP:
-     height: auto;
-  */
+  /* Lebar card lebih luas agar area latar biru lebih besar & lega sesuai referensi */
+  width: clamp(340px, 28vw, 420px);
   flex-shrink: 0;
-  background: linear-gradient(160deg, rgba(22, 29, 45, 0.92), rgba(12, 17, 27, 0.98));
+  background: #273e6b;
   border: none;
   border-radius: 0;
-  /* Kotak biasa (siku-siku, no rounded) */
-  padding: 0.72rem;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+  /* Padding besar agar warna biru membungkus mockup dengan luas */
+  padding: clamp(1.8rem, 2.6vw, 2.8rem) clamp(1.4rem, 2vw, 2.2rem);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   cursor: pointer;
@@ -3916,7 +3942,7 @@ main.touch .main-wrap {
 
 .work-card.marquee-card:hover {
   transform: translateY(-8px) scale(1.025);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.7), 0 0 25px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.7), 0 0 25px rgba(39, 62, 107, 0.4);
   z-index: 10;
 }
 
@@ -3931,21 +3957,21 @@ main.touch .main-wrap {
 .showcase-mobile-trio {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.45rem;
+  gap: 0.65rem;
   align-items: center;
   width: 100%;
-  padding: 0.2rem 0;
+  padding: 0;
 }
 
 .showcase-phone-screen {
   position: relative;
   width: 100%;
   aspect-ratio: 9 / 19.5;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   background: #090d14;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
@@ -4020,8 +4046,8 @@ main.touch .main-wrap {
   }
 
   .work-card.marquee-card {
-    width: 240px;
-    padding: 0.7rem 0.65rem;
+    width: 290px;
+    padding: 1.5rem 1.1rem;
     border-radius: 0;
   }
 }
